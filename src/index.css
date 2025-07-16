@@ -50,4 +50,16 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   }
   
+  @keyframes zoom {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .animate-zoom {
+    animation: zoom 4s ease-in-out infinite;
+  }
   
