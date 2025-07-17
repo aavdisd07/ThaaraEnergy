@@ -549,7 +549,7 @@ const Home = () => {
               <h2 className="text-8xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-green-500 to-black bg-clip-text text-transparent">
                 Portfolio of Services
               </h2>
-              <p className="text-4xl text-gray-300 max-w-3xl leading-relaxed">
+              <p className="text-4xl text-white max-w-3xl leading-relaxed">
                 We are strategically positioned for sustainable infrastructure development across the renewable energy value chain.
               </p>
             </div>
