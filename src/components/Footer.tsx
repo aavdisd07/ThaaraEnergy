@@ -7,9 +7,9 @@ const Footer = () => {
       {/* Organic Background Elements */}
       <div className="absolute inset-0">
       <img
-          src="https://static.vecteezy.com/system/resources/previews/022/145/333/non_2x/concept-idea-clean-energy-in-nature-lightbulb-with-solar-panel-and-wind-turbine-on-soil-free-photo.jpg"
-          alt="Clean Energy Concept"
-          className="absolute -left-1 -bottom-24 transform -translate-y-1/2 w-64 rounded-2xl opacity-70 shadow-2xl border border-white/10 hover:scale-105 transition-transform duration-500"
+src='https://png.pngtree.com/png-vector/20241230/ourmid/pngtree-renewable-energy-island-with-solar-panels-and-wind-turbines-png-image_14928764.png'
+alt="Clean Energy Concept"
+          className="absolute right-4 top-40 w-64 h-64 object-cover rounded opacity-60 shadow-2xl border border-white/0 hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-nature-400/10 to-transparent rounded-full -translate-x-32 -translate-y-32 animate-float"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-primary-400/10 to-transparent rounded-full translate-x-40 translate-y-40 animate-spin-slow"></div>
@@ -103,7 +103,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-6 text-center">
+        <div className="border-t  border-gray-700 mt-8 pt-6 text-center">
           <p className="text-gray-400 text-xs">
             © 2025 Thaara Energy. All rights reserved.
           </p>
