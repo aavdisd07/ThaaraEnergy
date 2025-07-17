@@ -11,6 +11,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 const Home = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [videoFailed, setVideoFailed] = useState(false);
 
   const handleScroll = () => {
     if (!scrollRef.current) return;
@@ -140,14 +141,38 @@ const Home = () => {
             <div
               className="absolute inset-0 w-full h-full overflow-hidden"
             >
-              <video
+              {/* <video
                 className="w-full h-full object-cover"
                 src="/BgVideo.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-              />
+              /> */}
+    {!videoFailed && (
+        <video
+          className="w-full h-full object-cover absolute top-0 left-0 z-0"
+          src="/BgVideo.mp4" // Update with your actual path
+          autoPlay
+          loop
+          muted
+          playsInline
+          onError={() => setVideoFailed(true)} // fallback trigger
+        />
+      )}
+
+      {/* Fallback YouTube background */}
+      {videoFailed && (
+        <iframe
+          className="w-full h-full absolute top-0 left-0 z-0 pointer-events-none"
+          src="https://www.youtube.com/embed/iCvUFavByJE?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&loop=1&playlist=iCvUFavByJE"
+          title="Fallback Background Video"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        ></iframe>
+      )}
+              
               <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-gray-90/85 to-black/40"></div>
               {/* <div className="absolute inset-0 bg-leaf-pattern"></div> */}
             </div>
