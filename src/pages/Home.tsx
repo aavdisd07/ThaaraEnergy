@@ -864,7 +864,7 @@ const Home = () => {
                 {/* Right Side - Image */}
                 <div className="flex justify-center">
                   <img
-                    src="/industry.jpg"
+                    src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEVZltx9nS%2FVRN42rsFuDL%2BJioThXd6aS49aEH7OuVZv%2B%2FmOY9mt%2F8%2FvROAv3%2Fg0VPRASic1be5%2FrUUtbGESrcyLHgoj2eLiE0Q2aebAiUb8gjjEE6PTEtSvTsDv7L6vnZQQSTSSLoGBE6tGgb8lgolSmRroW0Gg7hRjE7ei96goZnofano2GumHN6Cu9FkjtgGwBgvXC6GwYsxmY3sDC5Y7P%2FjFkNLzI0ZdSjQniAbIAEXPRcM7D95Cy2j%2BgW4S3FcGDSIWpFuFDdV5IbmV5azMwnWzXlIUn5AxPM7pMyb43XOB0tBvxQpimQ8QkYuiran%2BqArRzNGFhK3Q%2Fj6R%2BYAlrA4gbPvBxBk50U86R0dSs4PO0PsqM6c1zJfL1HwT6WLRtMhQABBjxlQZMjKFRkaYEev8x6PWFVzIIw8W656hQOj7aLxGvtqUwQaDy2R%2FIRkVXQLerAHujtxseBziWwBcqIs03UpG3r4zHZ9ZR3VBOTcTi3YCsbkDsu0eM0fXPKB5BBY25FxTAloo2UUhYM00Y5oV11u65XKSZkPp5LtKm%2FQGdHc2ruCR3XSD24lwV2TtYK3pjYtbKw%3D%3D&allow_caching=true&sz=w1920-h970&auditContext=forDisplay"
                     alt="Clean Energy"
                     className="w-full max-w-lg rounded-2xl shadow-lg animate-zoom"
                   />
