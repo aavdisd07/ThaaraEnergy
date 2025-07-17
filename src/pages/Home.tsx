@@ -546,7 +546,7 @@ const Home = () => {
 
             {/* Text */}
             <div className="text-center md:text-left">
-              <h2 className="text-8xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-green-500 to-black bg-clip-text text-transparent">
+              <h2 className="text-8xl lg:text-5xl font-bold mb-6  text-white bg-clip-text text-transparent">
                 Portfolio of Services
               </h2>
               <p className="text-4xl text-white max-w-3xl leading-relaxed">
