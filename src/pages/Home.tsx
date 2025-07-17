@@ -35,7 +35,7 @@ const Home = () => {
       icon: Sun,
       color: 'from-primary-400 via-primary-500 to-primary-600',
       bgColor: 'from-primary-50 to-primary-100',
-      image: 'https://images.pexels.com/photos/9800029/pexels-photo-9800029.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image:'https://d382rz2cea0pah.cloudfront.net/wp-content/uploads/2023/06/Untitled-design-1.jpg'
     },
     {
       title: 'EPCM for Renewable Infrastructure',
@@ -513,270 +513,365 @@ const Home = () => {
           {/* Services Preview */}
           {/* Services Preview */}
           <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
-            {/* Animated Background Elements */}
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-primary-600/20 to-nature-600/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-nature-600/15 to-primary-600/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-primary-500/10 to-nature-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
 
+      {/* Grid Pattern Overlay */}
+      <div className="absolute inset-0 opacity-10">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+            backgroundSize: '40px 40px',
+          }}
+        ></div>
+      </div>
 
-
-            <div className="absolute inset-0">
-              <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-primary-600/20 to-nature-600/20 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-nature-600/15 to-primary-600/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-primary-500/10 to-nature-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header Content */}
+        <div className="mb-16 bg-black px-6 py-12 rounded-2xl">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Image */}
+            <div className="flex justify-center">
+              <img
+                src="https://truesun.in/wp-content/uploads/2021/08/Landing-Carbon-Emission-Assessment-1024x933.png"
+                alt="services"
+                className="w-full max-w-md animate-zoom"
+              />
             </div>
 
-            {/* Grid Pattern Overlay */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute inset-0" style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
-                backgroundSize: '40px 40px'
-              }}></div>
+            {/* Text */}
+            <div className="text-center md:text-left">
+              <h2 className="text-8xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-green-500 to-black bg-clip-text text-transparent">
+                Portfolio of Services
+              </h2>
+              <p className="text-4xl text-gray-300 max-w-3xl leading-relaxed">
+                We are strategically positioned for sustainable infrastructure development across the renewable energy value chain.
+              </p>
             </div>
+          </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-              <div className="mb-16 bg-black px-6 py-12 rounded-2xl">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-                  {/* Image on Left with Zoom Animation */}
-                  <div className="flex justify-center">
-                    <img
-                      src="https://truesun.in/wp-content/uploads/2021/08/Landing-Carbon-Emission-Assessment-1024x933.png"
-                      alt="services"
-                      className="w-full max-w-md animate-zoom"
-                    />
-                  </div>
+          {/* Decorative Line */}
+          <div className="flex justify-center">
+            <div className="w-1/4 m-6 h-1 bg-gradient-to-r from-primary-500 to-nature-500 rounded-full"></div>
+          </div>
+        </div>
 
-                  {/* Text Content on Right */}
-                  <div className="text-center md:text-left">
+        {/* Carousel with Controls */}
+        <div className="relative ">
+          {/* Slider Controls */}
+          <button
+            type="button"
+            className="swiper-button-prev absolute top-1/2 -left-8 z-30 flex items-center justify-center -translate-y-1/2 px-2 cursor-pointer group focus:outline-none"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
+              <svg
+                className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 1 1 5l4 4"
+                />
+              </svg>
+              <span className="sr-only">Previous</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            className="swiper-button-next absolute top-1/2 -right-8 z-30 flex items-center justify-between -translate-y-1/2 px-0 cursor-pointer group focus:outline-none"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
+              <svg
+                className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+              <span className="sr-only">Next</span>
+            </span>
+          </button>
 
-                    {/* Title */}
-                    <h2 className="text-8xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-green-500 to-black bg-clip-text text-transparent">
-                      Portfolio of Services
-                    </h2>
-
-                    {/* Subtitle */}
-                    <p className="text-4xl text-gray-300 max-w-3xl leading-relaxed">
-                      We are strategically positioned for sustainable infrastructure development across the renewable energy value chain.
-                    </p>
-                  </div>
-                </div>
-                {/* Decorative Line */}
-                <div className=" flex items-centers justify-center">
-                  <div className="w-1/4 m-6 h-1 bg-gradient-to-r from-primary-500 to-nature-500 rounded-full"></div>
-                </div>
-              </div>
-
-
-
-              {/* Enhanced Swiper with Smooth Auto-Sliding */}
-              <div className="relative">
-                <Swiper
-                  modules={[Autoplay, Pagination]}
-                  spaceBetween={32}
-                  slidesPerView={1}
-                  breakpoints={{
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 }
-                  }}
-                  autoplay={{
-                    delay: 1500, // Slightly faster transition
-                    disableOnInteraction: false, // Continue autoplay even after user interaction
-                    pauseOnMouseEnter: true, // Pause when hovering
-                    reverseDirection: false, // Ensure forward direction
-                    waitForTransition: true, // Wait for transition to complete before next slide
-                    stopOnLastSlide: false // Continue looping
-                  }}
-                  speed={800} // Smooth transition speed (800ms)
-                  pagination={{
-                    clickable: true,
-                    bulletClass: 'swiper-pagination-bullet !bg-primary-500/50 !opacity-60 hover:!opacity-100 !transition-all !duration-300',
-                    bulletActiveClass: 'swiper-pagination-bullet-active !bg-gradient-to-r !from-primary-500 !to-nature-500 !opacity-100 !scale-110'
-                  }}
-                  loop={true} // Enable infinite loop
-                  loopAdditionalSlides={1} // Add extra slides for smoother loop
-                  watchSlidesProgress={true} // Watch slide progress for smoother animations
-                  centeredSlides={false} // Keep slides aligned properly
-                  grabCursor={true} // Show grab cursor on hover
-                  className="!pb-16 select-none" // Prevent text selection
-                  onAutoplayTimeLeft={(s, time, progress) => {
-                    // Optional: Add progress indicator if needed
-                    // This can be used to show autoplay progress
-                  }}
-                >
-                  {services.map((service, index) => (
-                    <SwiperSlide key={index}>
-                      <div className="group relative h-full">
-                        {/* Main Card */}
-                        <div className="relative bg-gradient-to-br from-gray-800/10 to-gray-900/90 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl hover:shadow-primary-500/30 transition-all duration-700 transform hover:-translate-y-2 border border-gray-700/50 hover:border-primary-500/50 h-full">
-
-                          {/* Glow Effect */}
-                          <div className="absolute  bg-gradient-to-r from-primary-500/0 via-primary-500/5 to-nature-500/0 opacity-1 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                          {/* Background Image */}
-                          <div className="absolute inset-0  group-hover:opacity-25 transition-opacity duration-500">
-                            <img
-                              src={service.image}
-                              alt={service.title}
-                              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
+          {/* Swiper Carousel */}
+          <Swiper
+            modules={[Autoplay, Pagination, Navigation]}
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+            spaceBetween={32}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+              reverseDirection: false,
+              waitForTransition: true,
+              stopOnLastSlide: false,
+            }}
+            speed={800}
+            pagination={{
+              clickable: true,
+              bulletClass:
+                'swiper-pagination-bullet !bg-primary-500/50 !opacity-60 hover:!opacity-100 !transition-all !duration-300',
+              bulletActiveClass:
+                'swiper-pagination-bullet-active !bg-gradient-to-r !from-primary-500 !to-nature-500 !opacity-100 !scale-110',
+            }}
+            loop={true}
+            loopAdditionalSlides={1}
+            watchSlidesProgress={true}
+            grabCursor={true}
+            className="!pb-16 select-none"
+          >
+            {services.map((service, index) => (
+              <SwiperSlide key={index}>
+                <div className="group relative h-full">
+                  <div className="relative bg-gradient-to-br from-gray-800/10 to-gray-900/90 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl hover:shadow-primary-500/30 transition-all duration-700 transform hover:-translate-y-2 border border-gray-700/50 hover:border-primary-500/50 h-full">
+                    <div className="absolute bg-gradient-to-r from-primary-500/0 via-primary-500/5 to-nature-500/0 opacity-1 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 group-hover:opacity-25 transition-opacity duration-500">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
+                    </div>
+                    <div className="absolute top-6 right-6 w-20 h-20 bg-gradient-to-br from-primary-500/20 to-nature-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+                    <div className="absolute bottom-6 left-6 w-16 h-16 bg-gradient-to-br from-nature-500/15 to-primary-500/15 rounded-full blur-xl group-hover:scale-125 transition-transform duration-700 delay-200"></div>
+                    <div className="relative z-10 p-8 h-full flex flex-col min-h-[400px]">
+                      <div className="mb-6">
+                        <div className="relative inline-block">
+                          <div
+                            className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-2xl blur-lg opacity-50 group-hover:opacity-80 transition-opacity duration-500`}
+                          ></div>
+                          <div
+                            className={`relative bg-gradient-to-r ${service.color} w-18 h-18 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl`}
+                          >
+                            <service.icon className="h-9 w-9 text-white" />
                           </div>
-
-                          {/* Floating Orbs */}
-                          <div className="absolute top-6 right-6 w-20 h-20 bg-gradient-to-br from-primary-500/20 to-nature-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
-                          <div className="absolute bottom-6 left-6 w-16 h-16 bg-gradient-to-br from-nature-500/15 to-primary-500/15 rounded-full blur-xl group-hover:scale-125 transition-transform duration-700 delay-200"></div>
-
-                          {/* Content */}
-                          <div className="relative z-10 p-8 h-full flex flex-col min-h-[400px]">
-                            {/* Icon */}
-                            <div className="mb-6">
-                              <div className="relative inline-block">
-                                <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-2xl blur-lg opacity-50 group-hover:opacity-80 transition-opacity duration-500`}></div>
-                                <div className={`relative bg-gradient-to-r ${service.color} w-18 h-18 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl`}>
-                                  <service.icon className="h-9 w-9 text-white" />
-                                </div>
-                              </div>
-                            </div>
-
-                            {/* Title */}
-                            <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-primary-100 transition-colors duration-300 line-clamp-2">
-                              {service.title}
-                            </h3>
-
-                            {/* Description */}
-                            <p className="text-gray-300 mb-8 leading-relaxed flex-grow group-hover:text-gray-200 transition-colors duration-300 line-clamp-4">
-                              {service.description}
-                            </p>
-
-                            {/* CTA Button */}
-                            <div className="mt-auto">
-                              <a
-                                href="/services.html"
-                                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-600 to-nature-600 text-white font-semibold rounded-xl hover:from-primary-500 hover:to-nature-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg group-hover:translate-x-1"
-                              >
-                                <span>Learn More</span>
-                                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                              </a>
-                            </div>
-                          </div>
-
-                          {/* Shine Effect */}
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-
-
-            </div>
-          </section>
+                      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-primary-100 transition-colors duration-300 line-clamp-2">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-300 mb-8 leading-relaxed flex-grow group-hover:text-gray-200 transition-colors duration-300 line-clamp-4">
+                        {service.description}
+                      </p>
+                      <div className="mt-auto">
+                        <a
+                          href="/services.html"
+                          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-600 to-nature-600 text-white font-semibold rounded-xl hover:from-primary-500 hover:to-nature-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg group-hover:translate-x-1"
+                        >
+                          <span>Learn More</span>
+                          <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </section>
 
           {/* Industry Opportunity */}
           <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-16">
-                <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-nature-800/50 to-primary-800/50 rounded-xl mb-5 border border-nature-500/30 shadow-lg">
-                  <div className="bg-gradient-to-r from-nature-500 to-primary-500 p-3 rounded-lg shadow-inner">
-                    <TrendingUp className="h-6 w-6 text-white" />
+      {/* Decorative Background Elements */}
+      <div className="absolute top-10 left-10 w-60 h-60 bg-gradient-to-br from-primary-500/10 to-nature-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-gradient-to-br from-nature-500/10 to-primary-500/10 rounded-full blur-2xl"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-nature-800/50 to-primary-800/50 rounded-xl mb-5 border border-nature-500/30 shadow-lg">
+            <div className="bg-gradient-to-r from-nature-500 to-primary-500 p-3 rounded-lg shadow-inner">
+              <TrendingUp className="h-6 w-6 text-white" />
+            </div>
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 tracking-wide">
+            Industry Opportunity
+          </h2>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            India's renewable energy sector presents unprecedented growth opportunities.
+          </p>
+        </div>
+
+        {/* Image Card */}
+        <div className="flex justify-center mb-12">
+          <div className="relative group rounded-3xl overflow-hidden shadow-2xl border border-primary-600/40 hover:shadow-primary-500/40 transition-all duration-700 max-w-md w-full bg-gradient-to-br from-gray-900/40 to-gray-800/70 backdrop-blur-xl">
+            <img
+              src="https://t3.ftcdn.net/jpg/05/54/51/40/360_F_554514065_A5Y17mmaZgxkbcKri1g52RrLDtLzOU54.jpg"
+              alt="Industry Opportunity"
+              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div className="absolute bottom-4 left-4 right-4 text-white text-center text-lg font-semibold">
+              Clean & Green Energy Future
+            </div>
+          </div>
+        </div>
+
+        {/* Swiper Carousel */}
+        <div className="relative">
+          {/* Decorative Arrows */}
+          <button
+            type="button"
+            className="swiper-button-prev absolute top-1/2 -translate-y-1/2 -left-8 z-30 flex items-center justify-center px-2 group focus:outline-none"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-lg transition shadow-lg ring-1 ring-white/30">
+              <svg
+                className="w-4 h-4 text-white"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+              <span className="sr-only">Previous</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            className="swiper-button-next absolute top-1/2 -translate-y-1/2 -right-8 z-30 flex items-center justify-center px-2 group focus:outline-none"
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-lg transition shadow-lg ring-1 ring-white/30">
+              <svg
+                className="w-4 h-4 text-white"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+              <span className="sr-only">Next</span>
+            </span>
+          </button>
+
+          <Swiper
+            modules={[Autoplay, Pagination, Navigation]}
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+            spaceBetween={24}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            loop={true}
+            pagination={{
+              clickable: true,
+              bulletClass:
+                'swiper-pagination-bullet !bg-primary-500/50 !opacity-60 hover:!opacity-100 !transition-all !duration-300',
+              bulletActiveClass:
+                'swiper-pagination-bullet-active !bg-gradient-to-r !from-primary-500 !to-nature-500 !opacity-100 !scale-110',
+            }}
+            className="!pb-10"
+          >
+            {opportunities.map((opportunity, index) => (
+              <SwiperSlide key={index}>
+                <div className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-4 shadow-xl hover:shadow-primary-500/30 transition-all duration-500 border border-gray-700 hover:border-primary-500/60 backdrop-blur-md relative overflow-hidden min-h-[100px] h-[120px] flex flex-col justify-between">
+                  {/* Decorative Glow */}
+                  <div className="absolute -top-10 -right-10 w-24 h-24 bg-gradient-to-br from-primary-500/30 to-nature-500/30 rounded-full blur-2xl opacity-50 group-hover:scale-125 transition-transform duration-700"></div>
+
+                  <div className="flex items-start space-x-4 relative z-10">
+                    <div className="bg-gradient-to-r from-primary-500 to-nature-500 w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                      <CheckCircle className="w-5 h-5 text-white" />
+                    </div>
+                    <p className="text-gray-300 font-medium leading-relaxed group-hover:text-white transition-colors duration-300 text-base line-clamp-3">
+                      {opportunity}
+                    </p>
                   </div>
                 </div>
-                <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 tracking-wide">
-                  Industry Opportunity
-                </h2>
-                <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                  India's renewable energy sector presents unprecedented growth opportunities.
-                </p>
-              </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </section>
 
-              {/* Horizontal Scroll Container */}
-              <div
-                className="flex gap-6 overflow-x-auto scrollbar-hide px-2 pb-4 -mx-2 scroll-smooth"
-                ref={scrollRef}
-                onScroll={handleScroll}
-              >
-                {opportunities.map((opportunity, index) => (
-                  <div
-                    key={index}
-                    className="min-w-[300px] sm:min-w-[340px] lg:min-w-[360px] group bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-6 shadow-xl hover:shadow-primary-500/30 transition-all duration-500 border border-gray-700 hover:border-primary-500/60 backdrop-blur-md relative overflow-hidden"
-                  >
-                    {/* Decorative Glow */}
-                    <div className="absolute -top-10 -right-10 w-24 h-24 bg-gradient-to-br from-primary-500/30 to-nature-500/30 rounded-full blur-2xl opacity-50 group-hover:scale-125 transition-transform duration-700"></div>
-
-                    <div className="flex items-start space-x-4 relative z-10">
-                      <div className="bg-gradient-to-r from-primary-500 to-nature-500 w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-md">
-                        <CheckCircle className="w-5 h-5 text-white" />
-                      </div>
-                      <p className="text-gray-300 font-medium leading-relaxed group-hover:text-white transition-colors duration-300 text-base">
-                        {opportunity}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Scroll Position Dots */}
-              <div className="flex justify-center mt-6 space-x-2">
-                {Array.from({ length: opportunities.length }).map((_, index) => (
-                  <span
-                    key={index}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeIndex
-                      ? "bg-primary-500 scale-110 shadow-md"
-                      : "bg-gray-600 opacity-50"
-                      }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </section>
 
 
 
 
           {/* CTA Section */}
           <section className="py-16 bg-gradient-to-r from-gray-900 via-yellow-900 to-gray-800 relative overflow-hidden">
-  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid md:grid-cols-2 gap-10 items-center">
-      {/* Left Side - Text Content */}
-      <div>
-        <div className="inline-flex items-center justify-center p-2 bg-white/10 rounded-xl mb-6 backdrop-blur-sm w-fit">
-          <Zap className="h-6 w-6 text-white animate-pulse" />
-        </div>
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-          Ready to Power Your Future with Clean Energy?
-        </h2>
-        <p className="text-lg text-white/90 mb-8 leading-relaxed">
-          Join us in building India's renewable energy infrastructure. From rooftop solar to utility-scale
-          parks, we deliver reliable, scalable, and profitable clean energy solutions.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a
-            href="/contact.html"
-            className="group relative bg-gradient-to-r from-nature-500 via-primary-500 to-nature-600 text-white px-8 py-4 rounded-xl font-semibold text-base hover:from-nature-600 hover:via-primary-600 hover:to-nature-700 transition-all duration-500 inline-flex items-center justify-center shadow-2xl transform hover:scale-105"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <span className="relative z-10">Start Your Project</span>
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
-          </a>
-          <a
-            href="/services.html"
-            className="group relative border-2 border-white/80 text-white px-8 py-4 rounded-xl font-semibold text-base hover:bg-white hover:text-black transition-all duration-500 backdrop-blur-sm bg-white/10 transform hover:scale-105"
-          >
-            <div className="absolute inset-0 bg-white rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <span className="relative z-10 group-hover:text-black">View All Services</span>
-          </a>
-        </div>
-      </div>
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid md:grid-cols-2 gap-10 items-center">
+                {/* Left Side - Text Content */}
+                <div>
+                  <div className="inline-flex items-center justify-center p-2 bg-white/10 rounded-xl mb-6 backdrop-blur-sm w-fit">
+                    <Zap className="h-6 w-6 text-white animate-pulse" />
+                  </div>
+                  <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                    Ready to Power Your Future with Clean Energy?
+                  </h2>
+                  <p className="text-lg text-white/90 mb-8 leading-relaxed">
+                    Join us in building India's renewable energy infrastructure. From rooftop solar to utility-scale
+                    parks, we deliver reliable, scalable, and profitable clean energy solutions.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a
+                      href="/contact.html"
+                      className="group relative bg-gradient-to-r from-nature-500 via-primary-500 to-nature-600 text-white px-8 py-4 rounded-xl font-semibold text-base hover:from-nature-600 hover:via-primary-600 hover:to-nature-700 transition-all duration-500 inline-flex items-center justify-center shadow-2xl transform hover:scale-105"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <span className="relative z-10">Start Your Project</span>
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
+                    </a>
+                    <a
+                      href="/services.html"
+                      className="group relative border-2 border-white/80 text-white px-8 py-4 rounded-xl font-semibold text-base hover:bg-white hover:text-black transition-all duration-500 backdrop-blur-sm bg-white/10 transform hover:scale-105"
+                    >
+                      <div className="absolute inset-0 bg-white rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <span className="relative z-10 group-hover:text-black">View All Services</span>
+                    </a>
+                  </div>
+                </div>
 
-      {/* Right Side - Image */}
-      <div className="flex justify-center">
-        <img
-          src="/industry.jpg"
-          alt="Clean Energy"
-          className="w-full max-w-lg rounded-2xl shadow-lg animate-zoom"
-        />
-      </div>
-    </div>
-  </div>
-</section>
+                {/* Right Side - Image */}
+                <div className="flex justify-center">
+                  <img
+                    src="/industry.jpg"
+                    alt="Clean Energy"
+                    className="w-full max-w-lg rounded-2xl shadow-lg animate-zoom"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
 
         </div >
       </main >

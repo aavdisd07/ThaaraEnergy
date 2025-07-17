@@ -6,11 +6,16 @@ const Footer = () => {
     <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white relative overflow-hidden">
       {/* Organic Background Elements */}
       <div className="absolute inset-0">
+      <img
+          src="https://static.vecteezy.com/system/resources/previews/022/145/333/non_2x/concept-idea-clean-energy-in-nature-lightbulb-with-solar-panel-and-wind-turbine-on-soil-free-photo.jpg"
+          alt="Clean Energy Concept"
+          className="absolute -left-1 -bottom-24 transform -translate-y-1/2 w-64 rounded-2xl opacity-70 shadow-2xl border border-white/10 hover:scale-105 transition-transform duration-500"
+        />
         <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-nature-400/10 to-transparent rounded-full -translate-x-32 -translate-y-32 animate-float"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-primary-400/10 to-transparent rounded-full translate-x-40 translate-y-40 animate-spin-slow"></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-r from-secondary-400/5 to-transparent rounded-full -translate-x-48 -translate-y-48 animate-pulse-slow"></div>
       </div>
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -33,7 +38,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-4 max-w-md leading-relaxed text-sm">
-              A clean technology and sustainable infrastructure company committed to powering the future responsibly. 
+              A clean technology and sustainable infrastructure company committed to powering the future responsibly.
               Building scalable solutions in renewable energy, electric mobility, and industrial sustainability.
             </p>
             <div className="bg-gradient-to-r from-nature-500/20 via-primary-500/20 to-secondary-500/20 rounded-xl p-4 backdrop-blur-sm border border-nature-400/30">
@@ -60,8 +65,8 @@ const Footer = () => {
                 { name: 'Contact Us', href: '/contact.html' }
               ].map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href} 
+                  <a
+                    href={link.href}
                     className="text-gray-300 hover:text-nature-300 transition-all duration-300 flex items-center group text-sm"
                   >
                     <div className="w-2 h-2 bg-nature-400 rounded-full mr-3 group-hover:scale-125 group-hover:bg-nature-300 transition-all duration-300"></div>
