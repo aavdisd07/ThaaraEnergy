@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  safelist: [
+    'swiper-button-prev',
+    'swiper-button-next',
+    'swiper-pagination-bullet',
+    'swiper-pagination-bullet-active',
+  ],
   theme: {
     extend: {
       keyframes: {
