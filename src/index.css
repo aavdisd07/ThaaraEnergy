@@ -62,4 +62,9 @@
   .animate-zoom {
     animation: zoom 4s ease-in-out infinite;
   }
-  
+  @font-face {
+    font-family: 'Ethnocentric';
+    src: url('/fonts/EthnocentricRg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }

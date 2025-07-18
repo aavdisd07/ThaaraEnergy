@@ -79,6 +79,8 @@ export default {
       
       },
       fontFamily: {
+        ethnocentric: ['"Ethnocentric"', 'sans-serif'],
+        
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif', 'Orbitron'],
       },
       animation: {

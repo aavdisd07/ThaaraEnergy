@@ -62,4 +62,26 @@
   100% {
     transform: translateX(calc((var(--items) * (var(--carousel-item-width) + var(--carousel-item-gap))) * -1));
   }
+}
+
+@media (max-width: 1024px) {
+  .carousel-wrapper {
+    --carousel-item-width: 240px;
+    --carousel-item-height: 340px;
+  }
+}
+
+@media (max-width: 640px) {
+  .carousel-wrapper {
+    --carousel-item-width: 90vw;
+    --carousel-item-height: 220px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .carousel-slide {
+    padding: 0.5rem;
+  }
+  .carousel-slide img {
+    height: 100px;
+  }
 } 
