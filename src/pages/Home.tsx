@@ -209,7 +209,7 @@ const Home = () => {
 /> */}
                 <div className="relative">
                   <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-transparent bg-gradient-to-r from-nature-200 via-primary-200 to-accent-200 bg-clip-text mb-6 animate-slide-up delay-100">
-                    Empowering Progress, Sustainability
+                    Empowering Progress, Sustainably
                   </h2>
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary-400 to-nature-400 rounded-full animate-pulse"></div>
                 </div>
