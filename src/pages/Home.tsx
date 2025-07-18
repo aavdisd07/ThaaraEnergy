@@ -131,19 +131,11 @@ const Home = () => {
           <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image with Overlay */}
             <div
-              className="absolute inset-0 w-full h-full overflow-hidden"
+              className="fixed inset-0 w-full h-full overflow-hidden"
             >
-              {/* <video
-                className="w-full h-full object-cover"
-                src="/BgVideo.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-              /> */}
               {!videoFailed && (
                 <video
-                  className="w-full h-full object-cover absolute top-0 left-0 z-0"
+                  className="w-full h-full object-cover object-center fixed inset-0 z-0"
                   src="/BgVideo.mp4" // Update with your actual path
                   autoPlay
                   loop
@@ -584,7 +576,7 @@ const Home = () => {
                 {/* Slider Controls */}
                 <button
                   type="button"
-                  className="swiper-button-prev absolute top-1/2 -left-2 sm:-left-8 z-30 flex items-center justify-center -translate-y-1/2 px-1 sm:px-2 cursor-pointer group focus:outline-none"
+                  className="swiper-button-prev absolute top-1/2 -left-2 sm:-left-8 z-30 hidden sm:flex items-center justify-center -translate-y-1/2 px-1 sm:px-2 cursor-pointer group focus:outline-none"
                 >
                   <span className="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
                     <svg
@@ -606,7 +598,7 @@ const Home = () => {
                 </button>
                 <button
                   type="button"
-                  className="swiper-button-next absolute top-1/2 -right-2 sm:-right-8 z-30 flex items-center justify-between -translate-y-1/2 px-0 cursor-pointer group focus:outline-none"
+                  className="swiper-button-next absolute top-1/2 -right-2 sm:-right-8 z-30 hidden sm:flex items-center justify-between -translate-y-1/2 px-0 cursor-pointer group focus:outline-none"
                 >
                   <span className="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
                     <svg
