@@ -152,8 +152,6 @@ const Home = () => {
                   onError={() => setVideoFailed(true)} // fallback trigger
                 />
               )}
-
-
               {/* Fallback YouTube background */}
               {videoFailed && (
                 <iframe
@@ -169,8 +167,6 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-gray-90/85 to-black/40"></div>
               <div className="absolute inset-0 bg-leaf-pattern"></div>
             </div>
-
-
 
             {/* Floating Organic Shapes */}
             {/* <div className="absolute inset-0 overflow-hidden">
@@ -203,7 +199,6 @@ const Home = () => {
 
                 <div className="relative">
                   <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-transparent bg-gradient-to-r from-nature-200 via-primary-200 to-accent-200 bg-clip-text mb-6 animate-slide-up delay-100">
-
                     Empowering Progress, Sustainably
                   </h2>
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary-400 to-nature-400 rounded-full animate-pulse"></div>
@@ -556,23 +551,23 @@ const Home = () => {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               {/* Header Content */}
-              <div className="mb-16 bg-black px-6 py-12 rounded-2xl">
-                <div className="grid md:grid-cols-2 gap-10 items-center">
+              <div className="mb-16 bg-black px-4 sm:px-6 lg:px-8 py-8 sm:py-12 rounded-2xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
                   {/* Image */}
-                  <div className="flex justify-center">
+                  <div className="flex justify-center mb-6 md:mb-0">
                     <img
                       src="https://truesun.in/wp-content/uploads/2021/08/Landing-Carbon-Emission-Assessment-1024x933.png"
                       alt="services"
-                      className="w-full max-w-md animate-zoom"
+                      className="w-3/4 max-w-xs sm:max-w-md md:w-full md:max-w-md animate-zoom"
                     />
                   </div>
 
                   {/* Text */}
                   <div className="text-center md:text-left">
-                    <h2 className="text-4xl sm:text-6xl lg:text-8xl font-bold mb-6 text-white bg-clip-text text-transparent">
+                    <h2 className="text-3xl sm:text-5xl lg:text-6xl xl:text-8xl font-bold mb-4 sm:mb-6 text-white bg-clip-text text-transparent">
                       Portfolio of Services
                     </h2>
-                    <p className="text-4xl text-white max-w-3xl leading-relaxed">
+                    <p className="text-base sm:text-2xl md:text-3xl lg:text-4xl text-white max-w-xs sm:max-w-lg md:max-w-3xl mx-auto md:mx-0 leading-relaxed">
                       We are strategically positioned for sustainable infrastructure development across the renewable energy value chain.
                     </p>
                   </div>
@@ -580,7 +575,7 @@ const Home = () => {
 
                 {/* Decorative Line */}
                 <div className="flex justify-center">
-                  <div className="w-1/4 m-6 h-1 bg-gradient-to-r from-primary-500 to-nature-500 rounded-full"></div>
+                  <div className="w-1/2 sm:w-1/4 m-4 sm:m-6 h-1 bg-gradient-to-r from-primary-500 to-nature-500 rounded-full"></div>
                 </div>
               </div>
 
@@ -589,11 +584,11 @@ const Home = () => {
                 {/* Slider Controls */}
                 <button
                   type="button"
-                  className="swiper-button-prev absolute top-1/2 -left-8 z-30 flex items-center justify-center -translate-y-1/2 px-2 cursor-pointer group focus:outline-none"
+                  className="swiper-button-prev absolute top-1/2 -left-2 sm:-left-8 z-30 flex items-center justify-center -translate-y-1/2 px-1 sm:px-2 cursor-pointer group focus:outline-none"
                 >
-                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
+                  <span className="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
                     <svg
-                      className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                      className="w-3 h-3 sm:w-4 sm:h-4 text-white dark:text-gray-800 rtl:rotate-180"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 6 10"
@@ -611,11 +606,11 @@ const Home = () => {
                 </button>
                 <button
                   type="button"
-                  className="swiper-button-next absolute top-1/2 -right-8 z-30 flex items-center justify-between -translate-y-1/2 px-0 cursor-pointer group focus:outline-none"
+                  className="swiper-button-next absolute top-1/2 -right-2 sm:-right-8 z-30 flex items-center justify-between -translate-y-1/2 px-0 cursor-pointer group focus:outline-none"
                 >
-                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
+                  <span className="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
                     <svg
-                      className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                      className="w-3 h-3 sm:w-4 sm:h-4 text-white dark:text-gray-800 rtl:rotate-180"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 6 10"
@@ -639,11 +634,11 @@ const Home = () => {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                   }}
-                  spaceBetween={32}
+                  spaceBetween={16}
                   slidesPerView={1}
                   breakpoints={{
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
+                    640: { slidesPerView: 2, spaceBetween: 20 },
+                    1024: { slidesPerView: 3, spaceBetween: 32 },
                   }}
                   autoplay={{
                     delay: 1500,
@@ -676,38 +671,38 @@ const Home = () => {
                             <img
                               src={service.image}
                               alt={service.title}
-                              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                              className="w-full h-40 sm:h-48 md:h-56 lg:h-64 object-cover transform group-hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
                           </div>
-                          <div className="absolute top-6 right-6 w-20 h-20 bg-gradient-to-br from-primary-500/20 to-nature-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
-                          <div className="absolute bottom-6 left-6 w-16 h-16 bg-gradient-to-br from-nature-500/15 to-primary-500/15 rounded-full blur-xl group-hover:scale-125 transition-transform duration-700 delay-200"></div>
-                          <div className="relative z-10 p-8 h-full flex flex-col min-h-[400px]">
-                            <div className="mb-6">
+                          <div className="absolute top-4 right-4 sm:top-6 sm:right-6 w-12 h-12 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-500/20 to-nature-500/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+                          <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br from-nature-500/15 to-primary-500/15 rounded-full blur-xl group-hover:scale-125 transition-transform duration-700 delay-200"></div>
+                          <div className="relative z-10 p-4 sm:p-8 h-full flex flex-col min-h-[320px] sm:min-h-[400px]">
+                            <div className="mb-4 sm:mb-6">
                               <div className="relative inline-block">
                                 <div
                                   className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-2xl blur-lg opacity-50 group-hover:opacity-80 transition-opacity duration-500`}
                                 ></div>
                                 <div
-                                  className={`relative bg-gradient-to-r ${service.color} w-18 h-18 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl`}
+                                  className={`relative bg-gradient-to-r ${service.color} w-12 h-12 sm:w-18 sm:h-18 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl`}
                                 >
-                                  <service.icon className="h-9 w-9 text-white" />
+                                  <service.icon className="h-7 w-7 sm:h-9 sm:w-9 text-white" />
                                 </div>
                               </div>
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-primary-100 transition-colors duration-300 line-clamp-2">
+                            <h3 className="text-lg sm:text-2xl font-bold text-white mb-2 sm:mb-4 group-hover:text-primary-100 transition-colors duration-300 line-clamp-2">
                               {service.title}
                             </h3>
-                            <p className="text-gray-300 mb-8 leading-relaxed flex-grow group-hover:text-gray-200 transition-colors duration-300 line-clamp-4">
+                            <p className="text-gray-300 mb-4 sm:mb-8 leading-relaxed flex-grow group-hover:text-gray-200 transition-colors duration-300 line-clamp-4 text-sm sm:text-base">
                               {service.description}
                             </p>
                             <div className="mt-auto">
                               <a
                                 href="/services.html"
-                                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-600 to-nature-600 text-white font-semibold rounded-xl hover:from-primary-500 hover:to-nature-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg group-hover:translate-x-1"
+                                className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-primary-600 to-nature-600 text-white font-semibold rounded-xl hover:from-primary-500 hover:to-nature-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg group-hover:translate-x-1 text-sm sm:text-base"
                               >
                                 <span>Learn More</span>
-                                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform duration-300" />
                               </a>
                             </div>
                           </div>
