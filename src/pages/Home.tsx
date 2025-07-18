@@ -10,7 +10,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 const Home = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [, setActiveIndex] = useState(0);
   const [videoFailed, setVideoFailed] = useState(false);
 
   const handleScroll = () => {
@@ -464,7 +464,7 @@ const Home = () => {
             {/* Curved Top */}
             <div className="absolute top-0 left-0 right-0">
               <svg viewBox="0 0 1200 120" fill="none" className="w-full h-20">
-                <path d="M0,0 C300,40 900,40 1200,0 L1200,0 L0,0 Z" fill="#000000" />
+                <path d="M0,0 C300,40 900,40 1200,0 L1200,0 L0,0 Z" fill="#444444" />
               </svg>
             </div>
 
@@ -748,11 +748,26 @@ const Home = () => {
         {/* Image Card */}
         <div className="flex justify-center mb-12">
           <div className="relative group rounded-3xl overflow-hidden shadow-2xl border border-primary-600/40 hover:shadow-primary-500/40 transition-all duration-700 max-w-md w-full bg-gradient-to-br from-gray-900/40 to-gray-800/70 backdrop-blur-xl">
-            <img
+            {/* <img
               src="https://t3.ftcdn.net/jpg/05/54/51/40/360_F_554514065_A5Y17mmaZgxkbcKri1g52RrLDtLzOU54.jpg"
               alt="Industry Opportunity"
               className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-            />
+            /> */}
+ <img
+  src="https://t3.ftcdn.net/jpg/05/54/51/40/360_F_554514065_A5Y17mmaZgxkbcKri1g52RrLDtLzOU54.jpg"
+  alt="Industry Opportunity"
+  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+  style={{
+    WebkitMaskImage: 'radial-gradient(ellipse at center, black 60%, transparent 100%)',
+    maskImage: 'radial-gradient(ellipse at center, black 60%, transparent 100%)',
+    WebkitMaskSize: '100% 100%',
+    maskSize: '100% 100%',
+    WebkitMaskRepeat: 'no-repeat',
+    maskRepeat: 'no-repeat',
+  }}
+/>
+
+
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
             <div className="absolute bottom-4 left-4 right-4 text-white text-center text-lg font-semibold">
               Clean & Green Energy Future
