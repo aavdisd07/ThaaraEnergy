@@ -119,44 +119,31 @@ const Home = () => {
                     {/* Hero Section */}
                     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
                         {/* Background Image with Overlay */}
-                        <div
-                            className="absolute inset-0 w-full h-full overflow-hidden"
-                        >
-                            {!videoFailed && (
-                                <video
-                                    className="w-full h-full object-cover object-center fixed inset-0"
-                                    src=".mp4" // Update with your actual path
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    onError={() => setVideoFailed(true)}
-                                />
-                            )}
-
-                            {videoFailed && (
-                                <video
-                                    className="w-full h-full object-cover object-center fixed inset-0"
-                                    src="https://videos.pexels.com/video-files/31667807/13492018_1920_1080_60fps.mp4"
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    style={{ pointerEvents: "none" }}
-                                />
-                            )}
+                        <div className="absolute inset-0 w-full h-full overflow-hidden">
+                            <video
+                                className="fixed inset-0 w-full h-full object-cover"
+                                src="https://res.cloudinary.com/dnywncw8q/video/upload/q_auto,f_auto/13492018_1920_1080_60fps_5_yufubi.mp4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                style={{ pointerEvents: 'none' }}
+                            />
                         </div>
+
+
 
                         {/* Content */}
                         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                             <div className="max-w-6xl mx-auto">
 
                                 <div className="relative">
-                                    <h2 className="text-8xl sm:text-2xl lg:text-6xl font-bold text-white bg-clip-text mb-6 ">
+                                    <h2 className="text-8xl sm:text-2xl lg:text-6xl font-bold text-white bg-clip-text mb-6 " style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}
+                                    >
                                         Empowering Progress, Sustainably
                                     </h2>
                                 </div>
-                                <p className="text-4xl text-transparent sm:text-lg text-white/90 lg:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+                                <p className="text-4xl text-transparent sm:text-lg text-white/90 lg:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed" style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}>
                                     Thaara Energy stands at the intersection of innovation, sustainability, and investment opportunity.
                                     We specialize in the development and delivery of innovative, high-impact solutions across the renewable energy value chain.
                                 </p>
@@ -200,10 +187,10 @@ const Home = () => {
                             {/* Title and Single-Line Description */}
                             <div className="mb-12 text-center lg:text-left">
                                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                                Solutions
+                                    Solutions
                                 </h2>
                                 <p className="text-lg text-gray-300 max-w-5xl mx-auto lg:mx-0 truncate whitespace-nowrap overflow-hidden text-ellipsis">
-                                Explore our diverse portfolio of renewable energy projects across different sectors and applications
+                                    Explore our diverse portfolio of renewable energy projects across different sectors and applications
                                 </p>
                             </div>
 
@@ -212,11 +199,11 @@ const Home = () => {
                                 {galleryImages.map((_image, index) => (
                                     <div
                                         key={index}
-                                        className="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-primary-500/20  border border-gray-800 "
+                                        className="group relative bg-gray-100 rounded-4xl overflow-hidden shadow-2xl hover:shadow-primary-500/20 "
                                         style={{ animationDelay: `${index * 100}ms` }}
                                     >
                                         {/* Image Container */}
-                                        <div className="relative h-[500px] overflow-hidden">
+                                        <div className="relative h-[450px] overflow-hidden">
                                             <img
                                                 src={_image.src}
                                                 alt={_image.title}
@@ -230,23 +217,38 @@ const Home = () => {
                                             <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                                             {/* Text and Button */}
-                                            <div className="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300">
-                                                <h3 className="text-white text-2xl font-semibold mb-2 group-hover:mb-2 transition-all duration-300">
-                                                    {_image.title}
-                                                </h3>
+                                            {/* Top Gradient with Title */}
+                                            <div className="absolute top-0 left-0 right-0 z-10">
+                                                {/* Moving Gradient Background */}
+                                                <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-black via-black/80 to-transparent transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"></div>
 
-                                                {/* Description (hidden by default) */}
-                                                <p className="text-sm text-gray-300 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 overflow-hidden transition-all duration-500 ease-in-out">
+                                                {/* Static Title Text */}
+                                                <div className="relative px-6 pt-6 pb-4">
+                                                    <h3
+                                                        className="text-white text-4xl font-semibold"
+                                                        style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}
+                                                    >
+                                                        {_image.title}
+                                                    </h3>
+                                                </div>
+                                            </div>
+
+
+                                            {/* Bottom Description and Button */}
+                                            <div className="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300">
+                                                <p
+                                                    className="lg:text-lg text-base opacity-0 group-hover:opacity-100 leading-lg font-figtree text-black md:text-white lg:leading-5 xl:leading-6 md:line-clamp-6"
+                                                    style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}
+                                                >
                                                     {_image.description}
                                                 </p>
-
-                                                {/* Explore Button */}
                                                 <button
                                                     className="mt-4 inline-block px-4 py-2 bg-white text-black text-sm font-semibold rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                                                 >
                                                     Explore {_image.title.split(' ')[0]}
                                                 </button>
                                             </div>
+
                                         </div>
                                     </div>
                                 ))}
@@ -339,12 +341,12 @@ const Home = () => {
                         <div className="relative z-10 max-w-7xl my-40 mx-auto flex flex-col gap-6">
                             {/* Right-aligned Heading */}
                             <div className="text-center">
-                                <h2 className="text-4xl lg:text-5xl font-bold drop-shadow-lg">Our Mission</h2>
+                                <h2 className="text-4xl lg:text-5xl font-bold drop-shadow-lg" style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}>Our Mission</h2>
                             </div>
 
                             {/* Centered Paragraph */}
                             <div className="text-center max-w-2xl mx-auto">
-                                <p className="text-lg lg:text-xl text-gray-200 leading-relaxed">
+                                <p className="text-lg lg:text-xl text-gray-200 leading-relaxed" style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}>
                                     Drive clean energy adoption through innovative and efficient solar solutions. We empower
                                     communities, industries, and nations through resilient, clean energy solutions with a focus
                                     on innovation, sustainability, and impact.
@@ -356,13 +358,13 @@ const Home = () => {
                     <section className="py-28 bg-black text-white relative overflow-hidden">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                             {/* Heading */}
-                          
+
                             <div className="mb-12 text-center lg:text-left">
                                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                                Industry Opportunity
+                                    Industry Opportunity
                                 </h2>
                                 <p className="text-lg text-gray-300 max-w-5xl mx-auto lg:mx-0 truncate whitespace-nowrap overflow-hidden text-ellipsis">
-                                India's renewable energy sector presents unprecedented growth opportunities.
+                                    India's renewable energy sector presents unprecedented growth opportunities.
                                 </p>
                             </div>
 

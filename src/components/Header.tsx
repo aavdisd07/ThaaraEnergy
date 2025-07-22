@@ -84,6 +84,8 @@ const Header = () => {
                 src="/thaaraLogo.png"
                 alt="Thaara Energy Logo"
                 className="h-16 w-auto object-contain"
+                style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
+
               />
             </a>
           </div>
@@ -95,15 +97,15 @@ const Header = () => {
                 <a
                   href={item.href}
                   className={`text-sm font-medium uppercase tracking-wide transition-all duration-300 px-3 py-2 rounded-lg flex items-center gap-1 ${isActive(item.href)
-                    ? 'text-black'
-                    : 'text-black hover:text-white'
+                    ? 'text-white'
+                    : 'text-white hover:text-white'
                     }`}
-                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
+                  style={{ textShadow: '1px 1px 2px rgb(4, 4, 4)' }}
                 >
                   {item.name}
                 </a>
                 <div
-                  className={`absolute left-0 right-0 bottom-0 h-0.5 rounded-full bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center ${isActive(item.href) ? 'scale-x-100' : ''
+                  className={`absolute left-0 right-0 bottom-0 h-0.5 rounded-full bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center ${isActive(item.href) ? 'scale-x-100' : ''
                     }`}
                 />
                 {item.dropdown && (
@@ -133,7 +135,7 @@ const Header = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-200 hover:text-blue-400 transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800"
+              className="text-gray-200 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-black"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -143,14 +145,14 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-4 pt-4 pb-6 space-y-3 bg-white/50 backdrop-blur-4xl border-t border-gray-700 rounded-b-2xl">
+            <div className="px-4 pt-4 pb-6 space-y-3 bg-white/10 backdrop-blur-3xl border-t border-gray-700 rounded-b-2xl">
               {navigation.map((item) => (
                 <div key={item.name} className="relative">
                   <a
                     href={item.href}
                     className={`block px-4 py-2 text-base font-semibold uppercase tracking-wide rounded-lg transition-all duration-300 flex items-center gap-1 ${isActive(item.href)
-                      ? 'text-black'
-                      : 'text-black hover:text-white'
+                      ? 'text-white'
+                      : 'text-white hover:text-black'
                       }`}
                     style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                     onClickCapture={() =>
