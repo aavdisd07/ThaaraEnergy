@@ -212,7 +212,7 @@ const Home = () => {
                                 {galleryImages.map((_image, index) => (
                                     <div
                                         key={index}
-                                        className="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-primary-500/20 transition-all duration-500  animate-slide-up border border-gray-800 hover:border-primary-500/50"
+                                        className="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-primary-500/20  border border-gray-800 "
                                         style={{ animationDelay: `${index * 100}ms` }}
                                     >
                                         {/* Image Container */}
@@ -442,13 +442,13 @@ const Home = () => {
                                 >
                                     {carouselData.map((item, index) => (
                                         <SwiperSlide key={index}>
-                                            <div className="bg-white text-black rounded-xl shadow-md overflow-hidden h-[280px] flex flex-col">
+                                            <div className="bg-white text-black  shadow-md overflow-hidden h-[320px] flex flex-col">
                                                 <img
                                                     src={item.image}
                                                     alt={`Slide ${index + 1}`}
-                                                    className="w-full h-40 object-cover"
+                                                    className="w-full h-56 object-cover"
                                                 />
-                                                <div className="p-4 text-center font-semibold flex-1 flex items-center justify-center">
+                                                <div className="p-4 text-center font-semibold flex-1 flex items-center">
                                                     {item.text}
                                                 </div>
                                             </div>
