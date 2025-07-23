@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Faq from './pages/Faq';
+import Faq from './pages/FAQ';
 import './index.css';
 
 function FaqApp() {
