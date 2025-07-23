@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
-
-  // Detect scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10); // Adjust scroll distance if needed
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -70,7 +60,11 @@ const Header = () => {
         { name: 'Our Location', href: '/contact.html#location' },
       ],
     },
-    { name: 'FAQ', href: '/faq.html' },
+    {
+      name: 'FAQ',
+      href: '/faq.html',
+
+    }
   ];
 
   const isActive = (path: string) => {
@@ -80,103 +74,52 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-black text-white w-full fixed top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center">
-        {/* Logo with margin */}
-        <div className="flex-shrink-0 mr-64 -ml-12">
-          <a href="/" className="flex items-center">
-            <img
-              src="/thaaraLogo.png"
-              alt="Thaara Energy Logo"
-              className="h-16 w-auto object-cover"
-            />
-          </a>
-        </div>
+    <header className="absolute top-0 left-0 right-0 z-30 bg-black/30 backdrop-blur-6xl ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-24">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <a href="/" className="flex items-center gap-2">
+              <img
+                src="/thaaraLogo.png"
+                alt="Thaara Energy Logo"
+                className="h-16 w-auto object-contain"
 
-
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center justify-betweens space-x-6">
-          {navigation.map((item) => (
-            <div key={item.name} className="relative group">
-              <a
-                href={item.href}
-                className={`text-sm font-medium uppercase tracking-wide transition-all duration-300 px-3 py-2 rounded-lg flex items-center gap-1 ${isActive(item.href)
-                  ? 'text-white'
-                  : 'text-white hover:text-white'
-                  }`}
-                style={{ textShadow: '2px 1px 0px rgba(9, 0, 0, 0.98)' }}
-              >
-                {item.name}
-              </a>
-
-              {/* Dropdown Line */}
-              <div
-                className={`absolute left-0 right-0 bottom-0 h-0.5 rounded-full bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center ${isActive(item.href) ? 'scale-x-100' : ''
-                  }`}
               />
+            </a>
+          </div>
 
-              {/* Dropdown Menu */}
-              {item.dropdown && (
-                <div
-                  className={`absolute top-full ${item.name === 'Contact' ? 'right-0' : 'left-0'
-                    } mt-0 w-64 bg-white/50 backdrop-blur-2xl border border-gray-700 rounded-lg shadow-xl py-2 
-                      opacity-0 group-hover:opacity-100 group-hover:translate-y-1 translate-y-3 
-                      pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-50`}
-                >
-                  {item.dropdown.map((sub) => (
-                    <a
-                      key={sub.name}
-                      href={sub.href}
-                      className="block px-4 py-2 text-sm text-black hover:text-white hover:bg-black/60 transition-colors duration-200"
-                      style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
-                    >
-                      {sub.name}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </nav>
-
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-gray-200 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-black"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-4 pt-4 pb-6 space-y-3 bg-white/10 backdrop-blur-3xl border-t border-gray-700 rounded-b-2xl">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <div key={item.name} className="relative">
+              <div key={item.name} className="relative group">
                 <a
                   href={item.href}
-                  className={`block px-4 py-2 text-base font-semibold uppercase tracking-wide rounded-lg transition-all duration-300 flex items-center gap-1 ${isActive(item.href) ? 'text-white' : 'text-white hover:text-black'
+                  className={`text-[16px] px-3 py-2 font-medium uppercase tracking-wide transition-all duration-300 rounded-lg flex items-center gap-1 ${isActive(item.href)
+                    ? 'text-white'
+                    : 'text-white hover:text-white'
                     }`}
-                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
-                  onClickCapture={() =>
-                    item.dropdown &&
-                    setDropdownOpen(dropdownOpen === item.name ? null : item.name)
-                  }
+                  style={{ textShadow: '3px 3px 5px rgba(9, 0, 0, 0.98)' }}
                 >
                   {item.name}
                 </a>
-                {item.dropdown && dropdownOpen === item.name && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {item.dropdown.map((sub) => (
+                <div
+                  className={`absolute left-0 right-0 bottom-0 h-0.5 rounded-full bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center ${isActive(item.href) ? 'scale-x-100' : ''
+                    }`}
+                />
+                {item.dropdown && (
+                  <div
+                    className={`absolute top-full ${item.name === 'Contact' ? 'right-0' : 'left-0'
+                      } mt-0 w-64 bg-white/50 backdrop-blur-2xl border border-gray-700 rounded-lg shadow-xl py-2
+                    opacity-0 group-hover:opacity-100 group-hover:translate-y-1 translate-y-3
+                    pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-50`}
+                  >
+                    {Array.isArray(item.dropdown) && (item.dropdown as { name: string; href: string }[]).map((sub) => (
                       <a
                         key={sub.name}
                         href={sub.href}
-                        className="block px-4 py-2 text-sm text-black hover:text-white hover:bg-black/60 rounded-lg transition-colors duration-200"
+                        className="block px-4 py-2 text-sm text-black hover:text-white hover:bg-black/60 transition-colors duration-200"
                         style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
-                        onClick={() => setIsMenuOpen(false)}
                       >
                         {sub.name}
                       </a>
@@ -185,11 +128,67 @@ const Header = () => {
                 )}
               </div>
             ))}
+          </nav>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-200 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-black"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
         </div>
-      )}
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-4 pt-4 pb-6 space-y-3 bg-white/10 backdrop-blur-3xl border-t border-gray-700 rounded-b-2xl">
+              {navigation.map((item) => (
+                <div key={item.name} className="relative">
+                  <button
+                    onClick={() =>
+                      item.dropdown &&
+                      setDropdownOpen(dropdownOpen === item.name ? null : item.name)
+                    }
+                    className={`w-full text-left px-4 py-2 text-base font-semibold uppercase tracking-wide rounded-lg transition-all duration-300 flex items-center justify-between gap-1 ${isActive(item.href)
+                      ? 'text-white'
+                      : 'text-white hover:text-black'
+                      }`}
+                    style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
+                  >
+                    {item.name}
+                    {item.dropdown && (
+                      <span>{dropdownOpen === item.name ? '−' : '+'}</span>
+                    )}
+                  </button>
+
+                  {/* Sub-menu */}
+                  {item.dropdown && dropdownOpen === item.name && (
+                    <div className="ml-4 mt-2 space-y-1">
+                      {item.dropdown.map((sub) => (
+                        <a
+                          key={sub.name}
+                          href={sub.href}
+                          className="block px-4 py-2 text-sm text-black hover:text-white hover:bg-black/60 rounded-lg transition-colors duration-200"
+                          style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {sub.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+      </div>
     </header>
   );
-};
+}
 
 export default Header;

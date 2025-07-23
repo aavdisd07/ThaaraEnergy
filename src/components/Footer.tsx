@@ -1,4 +1,4 @@
-import { Zap, Mail, MapPin, Leaf, Sparkles } from 'lucide-react';
+import { Mail, MapPin, Leaf, Sparkles } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -7,15 +7,13 @@ const Footer = () => {
       <div className="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#222222_0.5px,transparent_0.5px)] [background-size:20px_20px] opacity-20" />
 
       {/* Solar Glow Effects */}
-      <div className="absolute top-1/2 left-1/2 w-96 h-96 -translate-x-1/2 -translate-y-1/2 bg-white/5 rounded-full blur-3xl animate-pulse-slow" />
-      <div className="absolute -bottom-10 right-10 w-72 h-72 bg-gradient-to-br from-yellow-500/10 to-transparent rounded-full blur-2xl animate-float" />
+      <div className="absolute -bottom-12 -right-8 w-72 h-72 bg-gradient-to-br from-white/60 to-transparent rounded-full blur-2xl animate-float" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand & Mission */}
           <div className="lg:col-span-2">
-            <div className="flex items-center mb-4 space-x-3">
-              
+            <div className="flex items-start mb-4 space-x-3">
               <div>
                 <h4 className="text-xl font-bold">Thaara Energy</h4>
                 <p className="text-gray-400 text-sm flex items-center mt-1">
@@ -28,7 +26,7 @@ const Footer = () => {
               We develop scalable renewable infrastructure across solar, energy storage, and e-mobility. Innovation meets impact at Thaara Energy.
             </p>
             <div className="mt-4 px-4 py-3 bg-white/5 border border-white/10 rounded-lg backdrop-blur-md shadow-md">
-              <p className="text-yellow-400 font-medium text-sm flex items-center">
+              <p className="text-white font-medium text-sm flex items-center">
                 <Sparkles className="h-4 w-4 mr-2 animate-pulse" />
                 "Solar Today, Secure Tomorrow."
               </p>
@@ -52,7 +50,7 @@ const Footer = () => {
                     href={link.href}
                     className="text-gray-400 hover:text-white transition-all flex items-center group"
                   >
-                    <span className="w-2 h-2 mr-3 bg-yellow-400 rounded-full group-hover:scale-125 transition-transform"></span>
+                    <span className="w-2 h-2 mr-3 bg-white rounded-full group-hover:scale-125 transition-transform"></span>
                     {link.name}
                   </a>
                 </li>
@@ -65,11 +63,11 @@ const Footer = () => {
             <h5 className="text-lg font-semibold mb-3">Contact Info</h5>
             <div className="space-y-3 text-sm">
               <div className="flex items-start space-x-3">
-                <MapPin className="text-yellow-400 w-5 h-5" />
+                <MapPin className="text-white w-5 h-5" />
                 <span className="text-gray-300">Hyderabad, India</span>
               </div>
               <div className="flex items-start space-x-3">
-                <Mail className="text-yellow-400 w-5 h-5" />
+                <Mail className="text-white w-5 h-5" />
                 <div className="text-gray-300">
                   <div>rajeev@thaaraenergy.com</div>
                   <div className="mt-1">amrithaa@thaararajeev.com</div>
