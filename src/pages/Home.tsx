@@ -138,12 +138,14 @@ const Home = () => {
                             <div className="max-w-6xl mx-auto">
 
                                 <div className="relative">
-                                    <h2 className="text-8xl sm:text-2xl lg:text-6xl font-bold text-white bg-clip-text mb-6 " style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}
+                                    <h2 className="text-8xl sm:text-2xl lg:text-6xl font-bold text-white bg-clip-text mb-6 " style={{ textShadow: '2px 1px 0px rgba(9, 0, 0, 0.98)' }}
+
                                     >
                                         Empowering Progress, Sustainably
                                     </h2>
                                 </div>
-                                <p className="text-4xl text-transparent sm:text-lg text-white/90 lg:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed" style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}>
+                                <p className="text-4xl text-transparent sm:text-lg text-white/90 lg:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed" style={{ textShadow: '2px 1px 0px rgba(9, 0, 0, 0.98)' }}
+                                >
                                     Thaara Energy stands at the intersection of innovation, sustainability, and investment opportunity.
                                     We specialize in the development and delivery of innovative, high-impact solutions across the renewable energy value chain.
                                 </p>
@@ -175,35 +177,38 @@ const Home = () => {
                         {/* Curved Bottom */}
                         <div className="absolute bottom-0 left-0 right-0">
                             <svg viewBox="0 0 1200 120" fill="none" className="w-full h-20">
-                                <path d="M0,120 C300,80 900,80 1200,120 L1200,120 L0,120 Z" fill="#000000" />
+                                <path d="M0,120 C300,80 900,80 1200,120 L1200,120 L0,120 Z" fill="#FFFFFF" />
                             </svg>
                         </div>
                     </section>
 
                     {/* Solution */}
-                    <section className="py-16 bg-black relative">
+                    <section className="py-16 bg-white relative">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                             {/* Title and Single-Line Description */}
-                            <div className="mb-12 text-center lg:text-left">
-                                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                            <div className="mb-12 text-left">
+                                <h2 className="text-3xl lg:text-4xl font-bold text-black mb-4">
                                     Solutions
                                 </h2>
-                                <p className="text-lg text-gray-300 max-w-5xl mx-auto lg:mx-0 truncate whitespace-nowrap overflow-hidden text-ellipsis">
+                                <p className="text-lg text-black max-w-5xl">
                                     Explore our diverse portfolio of renewable energy projects across different sectors and applications
                                 </p>
                             </div>
 
+
+
                             {/* Cards Grid */}
-                            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {galleryImages.map((_image, index) => (
+                            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-32 gap-y-16">
+                            {galleryImages.map((_image, index) => (
                                     <div
                                         key={index}
-                                        className="group relative bg-gray-100 rounded-4xl overflow-hidden shadow-2xl hover:shadow-primary-500/20 "
+                                        className="group relative bg-gray-100 rounded-4xl overflow-hidden shadow-2xl hover:shadow-white/60 w-[400px] mx-auto"
                                         style={{ animationDelay: `${index * 100}ms` }}
                                     >
-                                        {/* Image Container */}
-                                        <div className="relative h-[450px] overflow-hidden">
+
+                                        {/* Image Container with Increased Height */}
+                                        <div className="relative h-[520px]  overflow-hidden">
                                             <img
                                                 src={_image.src}
                                                 alt={_image.title}
@@ -216,13 +221,9 @@ const Home = () => {
                                             {/* Hover tint */}
                                             <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                                            {/* Text and Button */}
                                             {/* Top Gradient with Title */}
                                             <div className="absolute top-0 left-0 right-0 z-10">
-                                                {/* Moving Gradient Background */}
                                                 <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-black via-black/80 to-transparent transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"></div>
-
-                                                {/* Static Title Text */}
                                                 <div className="relative px-6 pt-6 pb-4">
                                                     <h3
                                                         className="text-white text-4xl font-semibold"
@@ -232,7 +233,6 @@ const Home = () => {
                                                     </h3>
                                                 </div>
                                             </div>
-
 
                                             {/* Bottom Description and Button */}
                                             <div className="absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300">
@@ -248,27 +248,31 @@ const Home = () => {
                                                     Explore {_image.title.split(' ')[0]}
                                                 </button>
                                             </div>
-
                                         </div>
                                     </div>
                                 ))}
                             </div>
+
                         </div>
                     </section>
 
 
                     {/* Stats Section */}
+                    {/* Our Vision Section */}
                     <section className="w-full bg-black pt-5 pb-10 px-8 lg:px-12 xl:px-24 relative" id="section-gJN66">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="mb-12 text-center lg:text-left">
+
+                            {/* Title and Single-Line Description */}
+                            <div className="mb-12 text-left mt-4">
                                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
                                     Our Vision
                                 </h2>
-                                <p className="text-lg text-gray-300 max-w-5xl mx-auto lg:mx-0 truncate whitespace-nowrap overflow-hidden text-ellipsis">
+                                <p className="text-lg text-gray-300 max-w-5xl">
                                     We empower a cleaner future through smart energy and sustainable solutions.
                                 </p>
                             </div>
 
+                            {/* Features Grid */}
                             <div className="py-3">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                     {/* Feature 1 */}
@@ -317,6 +321,7 @@ const Home = () => {
                         </div>
                     </section>
 
+
                     {/*  Mission */}
                     <section
                         className="relative bg-black text-white min-h-[700px] py-28 px-8 sm:px-12 lg:px-24 overflow-hidden"
@@ -359,14 +364,17 @@ const Home = () => {
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                             {/* Heading */}
 
-                            <div className="mb-12 text-center lg:text-left">
+
+                            {/* Title and Single-Line Description */}
+                            <div className="mb-12 text-left mt-4">
                                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
                                     Industry Opportunity
                                 </h2>
-                                <p className="text-lg text-gray-300 max-w-5xl mx-auto lg:mx-0 truncate whitespace-nowrap overflow-hidden text-ellipsis">
+                                <p className="text-lg text-gray-300 max-w-5xl">
                                     India's renewable energy sector presents unprecedented growth opportunities.
                                 </p>
                             </div>
+
 
                             {/* Carousel Section */}
                             <div className="relative mb-16">

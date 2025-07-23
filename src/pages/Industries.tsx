@@ -1,6 +1,4 @@
-import React from 'react';
-import { Building2, Factory, Home, Zap, Truck, ShoppingBag, Sun, Battery, Leaf, Wind, Sparkles, Globe, TrendingUp } from 'lucide-react';
-import ServicesCarousel from '../components/ServicesCarousel';
+import { Building2, Factory, Home, Zap, Truck, Sun, Battery, Leaf, Wind, Sparkles, Globe, TrendingUp } from 'lucide-react';
 
 const Industries = () => {
   const industries = [
@@ -126,19 +124,6 @@ const Industries = () => {
       color: 'from-nature-500 to-nature-600'
     }
   ];
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1 } },
-    ],
-  };
 
   return (
     <div className="animate-fade-in overflow-hidden">
@@ -224,7 +209,6 @@ const Industries = () => {
           </div>
         </div>
       </section>
-      <ServicesCarousel industries={industriesForCarousel} />
 
       {/* Market Opportunities */}
       <section className="py-24 bg-gradient-to-br from-primary-50 via-white to-nature-50 relative overflow-hidden">
