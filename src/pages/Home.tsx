@@ -164,23 +164,18 @@ const Home = () => {
                             </div>
                         </div>
 
-                        {/* Curved Bottom */}
-                        <div className="absolute bottom-0 left-0 right-0">
-                            <svg viewBox="0 0 1200 120" fill="none" className="w-full h-12 sm:h-16 md:h-20">
-                                <path d="M0,120 C300,80 900,80 1200,120 L1200,120 L0,120 Z" fill="#FFFFFF" />
-                            </svg>
-                        </div>
                     </section>
 
                     {/* Solutions Section */}
                     <section className="py-12 sm:py-16 lg:py-20 bg-white relative">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             {/* Title and Description */}
-                            <div className="mb-8 sm:mb-12 text-left">
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-3 sm:mb-4">
+
+                            <div className="mb-8 sm:mb-10 md:mb-12 text-left mt-2 sm:mt-4">
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-3 sm:mb-4 leading-tight">
                                     Solutions
                                 </h2>
-                                <p className="text-base sm:text-lg text-black-900 max-w-5xl">
+                                <p className="text-base sm:text-lg md:text-xl text-black max-w-5xl leading-relaxed">
                                     Explore our diverse portfolio of renewable energy projects across different sectors and applications
                                 </p>
                             </div>
@@ -242,14 +237,17 @@ const Home = () => {
                     </section>
 
                     {/* Our Vision Section */}
-                    <section className="w-full bg-black pt-8 sm:pt-12 pb-8 sm:pb-16 px-4 sm:px-8 lg:px-12 xl:px-24 relative">
-                        <div className="max-w-7xl mx-auto">
+                    {/* <section className="w-full bg-black pt-8 sm:pt-12 pb-8 sm:pb-16 px-4 sm:px-8 lg:px-12 xl:px-24 relative">
+                        <div className="max-w-7xl mx-auto"> */}
+
+                    <section className="py-12 sm:py-16 lg:py-20 bg-black relative">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             {/* Title and Description */}
-                            <div className="mb-8 sm:mb-12 text-left">
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
+                            <div className="mb-8 sm:mb-10 md:mb-12 text-left mt-2 sm:mt-4">
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
                                     Our Vision
                                 </h2>
-                                <p className="text-base sm:text-lg text-white max-w-5xl">
+                                <p className="text-base sm:text-lg md:text-xl text-white max-w-5xl leading-relaxed">
                                     We empower a cleaner future through smart energy and sustainable solutions.
                                 </p>
                             </div>
@@ -346,8 +344,7 @@ const Home = () => {
                     </section>
 
                     {/* Mission Section */}
-                    <section
-                        className="relative bg-black text-white min-h-[500px] sm:min-h-[600px] lg:min-h-[700px] py-16 sm:py-20 lg:py-28 px-4 sm:px-8 lg:px-12 xl:px-24 overflow-hidden"
+                    <section className="relative bg-black text-white min-h-[500px] sm:min-h-[600px] lg:min-h-[700px] py-16 sm:py-20 lg:py-28 px-4 sm:px-8 lg:px-12 xl:px-24 overflow-hidden"
                         style={{
                             backgroundImage: "url('https://cosmosmagazine.com/wp-content/uploads/2022/10/sellmore.Getty_.jpg')",
                             backgroundSize: "cover",
@@ -357,12 +354,7 @@ const Home = () => {
                         {/* Dark Overlay */}
                         <div className="absolute inset-0 bg-black/60 z-0"></div>
 
-                        {/* Curved Top */}
-                        <div className="absolute top-0 left-0 right-0 z-10">
-                            <svg viewBox="0 0 1200 120" fill="none" className="w-full h-12 sm:h-16 md:h-20">
-                                <path d="M0,0 C300,40 900,40 1200,0 L1200,0 L0,0 Z" fill="black" />
-                            </svg>
-                        </div>
+
 
                         {/* Content */}
                         <div className="relative z-10 max-w-7xl mx-auto flex flex-col gap-6 justify-center min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]">
@@ -382,7 +374,7 @@ const Home = () => {
                         </div>
                     </section>
                     {/* industry sectionu */}
-                    <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-black text-white relative overflow-hidden">
+                    <section className="pt-8 sm:pt-20 md:pt-24 lg:pt-28 sm:pb-10 md:pb-12 lg:pb-12 bg-black text-white relative overflow-hidden">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                             {/* Heading */}
                             <div className="mb-8 sm:mb-10 md:mb-12 text-left mt-2 sm:mt-4">
@@ -515,9 +507,9 @@ const Home = () => {
                             {/* Full-Width Section with Text Left and Image Right */}
                             <div className="bg-black text-white w-full py-16 sm:py-20 md:py-24 lg:py-28 px-4 lg:px-0">
                                 <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 sm:gap-10 md:gap-12 xl:gap-16">
-                                    
-                                     {/* Right Image Section */}
-                                     <div className="w-full lg:w-1/2 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-none">
+
+                                    {/* Right Image Section */}
+                                    <div className="w-full lg:w-1/2 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-none">
                                         <div className="overflow-hidden shadow-2xl border border-white/10 rounded-lg md:rounded-xl">
                                             <img
                                                 src="https://media.istockphoto.com/id/525206743/photo/solar-panel-on-a-red-roof.jpg?s=612x612&w=0&k=20&c=xcAkdNj8dFDhu8734FpRDAZDtN2bjr48RKEd9j2FL0U="
@@ -546,15 +538,13 @@ const Home = () => {
 
                                         <h4 className="text-white text-lg sm:text-xl font-medium">From Local Sites to National Scale</h4>
                                     </div>
-
-                                   
                                 </div>
                             </div>
                         </div>
                     </section>
 
                     {/* CTA Section */}
-                    <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-black text-white relative overflow-hidden">
+                    <section className="pt-2 sm:pt-10 md:pt-12 lg:pt-8 pb-8 sm:pb-20 md:pb-24 lg:pb-28 bg-black text-white relative overflow-hidden">
                         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
                                 {/* Image Section - Shows first on mobile, second on desktop */}

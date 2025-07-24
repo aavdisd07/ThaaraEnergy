@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
@@ -110,15 +110,15 @@ const Header = () => {
                 {item.dropdown && (
                   <div
                     className={`absolute top-full ${item.name === 'Contact' ? 'right-0' : 'left-0'
-                      } mt-0 w-64 bg-white/50 backdrop-blur-2xl border border-gray-700 rounded-lg shadow-xl py-2
+                      } mt-0 w-64 bg-white backdrop-blur-6xl border border-black rounded-xl shadow-xl py-2
                     opacity-0 group-hover:opacity-100 group-hover:translate-y-1 translate-y-3
-                    pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-50`}
+                    pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-10`}
                   >
                     {Array.isArray(item.dropdown) && (item.dropdown as { name: string; href: string }[]).map((sub) => (
                       <a
                         key={sub.name}
                         href={sub.href}
-                        className="block px-4 py-2 text-sm text-black hover:text-white hover:bg-black/60 transition-colors duration-200"
+                        className="block px-4 py-2 text-sm text-black hover:text-white hover:bg-black/80  transition-colors duration-200"
                         style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                       >
                         {sub.name}

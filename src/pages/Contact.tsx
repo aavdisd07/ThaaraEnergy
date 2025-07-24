@@ -37,30 +37,22 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Office Location',
-      details: ['Hyderabad, India', 'Serving India & Europe'],
-      color: 'from-primary-400 to-primary-600',
-      bgColor: 'from-primary-50 to-primary-100'
+      details: ['Hyderabad, India', 'Serving India & Europe']
     },
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+91 9966886880'],
-      color: 'from-nature-400 to-nature-600',
-      bgColor: 'from-nature-50 to-nature-100'
+      details: ['+91 9966886880']
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['rajeev@thaaraenergy.com', 'amrithaa@thaararajeev.com'],
-      color: 'from-secondary-400 to-secondary-600',
-      bgColor: 'from-secondary-50 to-secondary-100'
+      details: ['rajeev@thaaraenergy.com', 'amrithaa@thaararajeev.com']
     },
     {
       icon: Clock,
       title: 'Business Hours',
-      details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat: 9:00 AM - 2:00 PM'],
-      color: 'from-accent-400 to-accent-600',
-      bgColor: 'from-accent-50 to-accent-100'
+      details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat: 9:00 AM - 2:00 PM']
     }
   ];
 
@@ -75,64 +67,43 @@ const Contact = () => {
   ];
 
   return (
-    <div className="animate-fade-in overflow-hidden">
+    <div className="bg-black text-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background with Green Energy Theme */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=1600')",
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-nature-800/85 to-secondary-900/90"></div>
-          <div className="absolute inset-0 bg-leaf-pattern opacity-20"></div>
-        </div>
-        
-        {/* Floating Energy Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-primary-400/30 to-nature-400/30 rounded-full animate-float blur-xl"></div>
-          <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-secondary-400/30 to-accent-400/30 rounded-full animate-float delay-1000 blur-lg"></div>
-          <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-gradient-to-br from-nature-400/20 to-primary-400/20 rounded-full animate-bounce-slow blur-2xl"></div>
-          <div className="absolute bottom-20 right-16 w-28 h-28 bg-gradient-to-br from-accent-400/30 to-secondary-400/30 rounded-full animate-float delay-2000 blur-lg"></div>
-        </div>
+      <section 
+        className="relative py-32 bg-gray-900"
+        style={{
+          backgroundImage: "url('https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=1600')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center justify-center p-3 bg-white/10 rounded-2xl mb-8 backdrop-blur-sm">
-            <Mail className="h-8 w-8 text-white animate-pulse" />
-          </div>
-          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8 animate-slide-up">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-8">
             Get In Touch
           </h1>
-          <p className="text-xl text-white/90 max-w-4xl mx-auto animate-slide-up delay-100">
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Ready to transform your energy future? Contact us to discuss your clean energy 
             and sustainability requirements. We're here to help you achieve your goals.
           </p>
         </div>
-
-        {/* Curved Bottom */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1200 120" fill="none" className="w-full h-20">
-            <path d="M0,120 C300,80 900,80 1200,120 L1200,120 L0,120 Z" fill="white"/>
-          </svg>
-        </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-gradient-to-br from-white via-primary-50/30 to-nature-50/30 relative">
-        <div className="absolute inset-0 bg-leaf-pattern opacity-10"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <div className="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-primary-100 hover:border-primary-200">
-              {/* Form Header with Image */}
-              <div className="relative h-32 overflow-hidden">
+            <div className="bg-gray-900 rounded-lg shadow-xl border border-gray-800">
+              {/* Form Header */}
+              <div className="relative h-32 bg-gray-800 rounded-t-lg">
                 <img 
                   src="https://images.pexels.com/photos/9800029/pexels-photo-9800029.jpeg?auto=compress&cs=tinysrgb&w=800" 
                   alt="Contact Us"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover rounded-t-lg opacity-60"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/70 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-t-lg"></div>
                 <div className="absolute bottom-4 left-6">
                   <h2 className="text-2xl font-bold text-white">Send Us a Message</h2>
                 </div>
@@ -142,7 +113,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-primary-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                         Full Name *
                       </label>
                       <input
@@ -152,12 +123,12 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-primary-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 bg-primary-50/50"
+                        className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-300 bg-gray-800 text-white"
                         placeholder="Your full name"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-primary-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                         Email Address *
                       </label>
                       <input
@@ -167,7 +138,7 @@ const Contact = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-primary-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 bg-primary-50/50"
+                        className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-300 bg-gray-800 text-white"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -175,7 +146,7 @@ const Contact = () => {
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-primary-700 mb-2">
+                      <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
                         Company/Organization
                       </label>
                       <input
@@ -184,12 +155,12 @@ const Contact = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-primary-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 bg-primary-50/50"
+                        className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-300 bg-gray-800 text-white"
                         placeholder="Your company name"
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-primary-700 mb-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
                         Phone Number
                       </label>
                       <input
@@ -198,14 +169,14 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-primary-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 bg-primary-50/50"
+                        className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-300 bg-gray-800 text-white"
                         placeholder="Your phone number"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-primary-700 mb-2">
+                    <label htmlFor="service" className="block text-sm font-medium text-white mb-2">
                       Service Interest
                     </label>
                     <select
@@ -213,7 +184,7 @@ const Contact = () => {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-primary-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 bg-primary-50/50"
+                      className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-300 bg-gray-800 text-white"
                     >
                       <option value="">Select a service</option>
                       {services.map((service, index) => (
@@ -223,7 +194,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-primary-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                       Message *
                     </label>
                     <textarea
@@ -233,18 +204,17 @@ const Contact = () => {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-primary-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 resize-none bg-primary-50/50"
+                      className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-300 resize-none bg-gray-800 text-white"
                       placeholder="Tell us about your project requirements..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="group relative w-full bg-gradient-to-r from-primary-500 via-primary-600 to-nature-600 text-white py-4 rounded-xl font-semibold hover:from-primary-600 hover:via-primary-700 hover:to-nature-700 transition-all duration-500 flex items-center justify-center shadow-lg transform hover:scale-105"
+                    className="w-full bg-white text-black py-4 rounded-lg font-semibold hover:bg-gray-200 transition-all duration-300 flex items-center justify-center shadow-lg"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <span className="relative z-10">Send Message</span>
-                    <Send className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    Send Message
+                    <Send className="ml-3 h-5 w-5" />
                   </button>
                 </form>
               </div>
@@ -253,15 +223,10 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <div className="inline-flex items-center justify-center p-2 bg-gradient-to-r from-primary-100 to-nature-100 rounded-2xl mb-6">
-                  <div className="bg-gradient-to-r from-primary-500 to-nature-500 p-3 rounded-xl">
-                    <Globe className="h-8 w-8 text-white" />
-                  </div>
-                </div>
-                <h2 className="text-3xl font-bold text-primary-900 mb-6">
+                <h2 className="text-3xl font-bold text-white mb-8">
                   Contact Information
                 </h2>
-                <p className="text-primary-600 mb-8 text-lg">
+                <p className="text-gray-400 mb-8 text-lg leading-relaxed">
                   We're here to help you with your clean energy and sustainability needs. 
                   Reach out to us through any of the following channels.
                 </p>
@@ -271,19 +236,16 @@ const Contact = () => {
                 {contactInfo.map((info, index) => (
                   <div 
                     key={index}
-                    className={`group relative bg-gradient-to-br ${info.bgColor} rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 border border-primary-100 hover:border-primary-200`}
+                    className="bg-gray-900 rounded-lg border border-gray-800 hover:border-gray-600 transition-colors duration-300"
                   >
-                    {/* Background Pattern */}
-                    <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-white/30 to-transparent rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
-                    
-                    <div className="relative z-10 flex items-start space-x-4 p-8">
-                      <div className={`bg-gradient-to-r ${info.color} w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg`}>
-                        <info.icon className="h-8 w-8 text-white" />
+                    <div className="flex items-start space-x-4 p-8">
+                      <div className="bg-white w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <info.icon className="h-8 w-8 text-black" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-primary-900 mb-3">{info.title}</h3>
+                        <h3 className="text-xl font-semibold text-white mb-3">{info.title}</h3>
                         {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} className="text-primary-700 font-medium">{detail}</p>
+                          <p key={detailIndex} className="text-gray-400 font-medium">{detail}</p>
                         ))}
                       </div>
                     </div>
@@ -292,14 +254,14 @@ const Contact = () => {
               </div>
 
               {/* Quick Response Promise */}
-              <div className="bg-gradient-to-r from-primary-50 via-nature-50 to-primary-50 rounded-3xl p-8 border border-primary-200 shadow-lg">
+              <div className="bg-gray-900 rounded-lg p-8 border border-gray-800">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="bg-gradient-to-r from-primary-500 to-nature-500 p-3 rounded-2xl">
-                    <Sparkles className="h-6 w-6 text-white" />
+                  <div className="bg-white p-3 rounded-lg">
+                    <Sparkles className="h-6 w-6 text-black" />
                   </div>
-                  <h3 className="text-xl font-semibold text-primary-900">Quick Response</h3>
+                  <h3 className="text-xl font-semibold text-white">Quick Response</h3>
                 </div>
-                <p className="text-primary-700 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   We typically respond to all inquiries within 24 hours during business days. 
                   For urgent matters, please call us directly.
                 </p>
@@ -310,45 +272,33 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-24 bg-gradient-to-br from-primary-50 via-white to-nature-50 relative overflow-hidden">
-        {/* Curved Top */}
-        <div className="absolute top-0 left-0 right-0">
-          <svg viewBox="0 0 1200 120" fill="none" className="w-full h-20">
-            <path d="M0,0 C300,40 900,40 1200,0 L1200,0 L0,0 Z" fill="white"/>
-          </svg>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+      <section className="py-24 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center p-2 bg-gradient-to-r from-nature-100 to-primary-100 rounded-2xl mb-6">
-              <div className="bg-gradient-to-r from-nature-500 to-primary-500 p-3 rounded-xl">
-                <MapPin className="h-8 w-8 text-white" />
-              </div>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary-900 mb-6">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
               Our Location
             </h2>
-            <p className="text-xl text-primary-600">
+            <p className="text-xl text-gray-400">
               Headquartered in Hyderabad, India, serving emerging markets across India and Europe.
             </p>
           </div>
           
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-primary-100">
-            {/* Map Header with Image */}
-            <div className="relative h-64 overflow-hidden">
+          <div className="bg-black rounded-lg shadow-xl border border-gray-800">
+            {/* Map Header */}
+            <div className="relative h-64">
               <img 
                 src="https://images.pexels.com/photos/9800029/pexels-photo-9800029.jpeg?auto=compress&cs=tinysrgb&w=1200" 
                 alt="Hyderabad Solar Infrastructure"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-t-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/70 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-t-lg"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <div className="bg-white/20 p-6 rounded-3xl mb-4 backdrop-blur-sm">
-                    <MapPin className="h-16 w-16 mx-auto animate-bounce" />
+                  <div className="bg-white/20 p-6 rounded-lg mb-4 backdrop-blur-sm">
+                    <MapPin className="h-16 w-16 mx-auto" />
                   </div>
                   <h3 className="text-3xl font-bold mb-2">Hyderabad, India</h3>
-                  <p className="text-white/90 text-lg">
+                  <p className="text-gray-300 text-lg">
                     Strategic location for serving emerging markets in India and expanding to Europe
                   </p>
                 </div>
@@ -358,25 +308,25 @@ const Contact = () => {
             <div className="p-12 text-center">
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="group">
-                  <div className="bg-gradient-to-r from-primary-500 to-primary-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Globe className="h-8 w-8 text-white" />
+                  <div className="bg-white w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Globe className="h-8 w-8 text-black" />
                   </div>
-                  <h4 className="text-lg font-semibold text-primary-900 mb-2">Global Reach</h4>
-                  <p className="text-primary-600">Serving India & Europe</p>
+                  <h4 className="text-lg font-semibold text-white mb-2">Global Reach</h4>
+                  <p className="text-gray-400">Serving India & Europe</p>
                 </div>
                 <div className="group">
-                  <div className="bg-gradient-to-r from-nature-500 to-nature-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Wind className="h-8 w-8 text-white" />
+                  <div className="bg-white w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Wind className="h-8 w-8 text-black" />
                   </div>
-                  <h4 className="text-lg font-semibold text-primary-900 mb-2">Clean Energy Hub</h4>
-                  <p className="text-primary-600">Renewable Energy Focus</p>
+                  <h4 className="text-lg font-semibold text-white mb-2">Clean Energy Hub</h4>
+                  <p className="text-gray-400">Renewable Energy Focus</p>
                 </div>
                 <div className="group">
-                  <div className="bg-gradient-to-r from-secondary-500 to-secondary-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Leaf className="h-8 w-8 text-white" />
+                  <div className="bg-white w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Leaf className="h-8 w-8 text-black" />
                   </div>
-                  <h4 className="text-lg font-semibold text-primary-900 mb-2">Sustainable Future</h4>
-                  <p className="text-primary-600">Green Technology Innovation</p>
+                  <h4 className="text-lg font-semibold text-white mb-2">Sustainable Future</h4>
+                  <p className="text-gray-400">Green Technology Innovation</p>
                 </div>
               </div>
             </div>

@@ -9,7 +9,7 @@ function ServicesApp() {
   return (
     <div className="min-h-screen bg-black">
       <Header />
-      <main className="pt-16">
+      <main className="pt-24">
         <Services />
       </main>
       <Footer />

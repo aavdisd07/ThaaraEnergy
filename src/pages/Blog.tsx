@@ -74,32 +74,40 @@ const Blog = () => {
     : blogPosts.filter(post => post.category === selectedCategory);
 
   return (
-    <div className="animate-fade-in">
+    <div className="bg-black text-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-50 to-secondary-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-dark-800 mb-6">
-            Insights & Perspectives
+      <section
+        className="relative min-h-[60vh] flex items-center justify-center text-center bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://sunveera.com/wp-content/uploads/2024/04/GettyImages-1278948452-e1fdce3baef44af28f449ab36d6717f3-1024x683.webp')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="relative z-10 max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+          Insights & Perspectives
+
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay informed about the latest developments in clean energy, sustainability, 
-            and the future of renewable technology.
+          <p className="text-white/80 text-lg">
+          Stay informed about the latest developments in clean energy, sustainability, 
+          and the future of renewable technology.
           </p>
         </div>
       </section>
 
       {/* Category Filter */}
-      <section className="py-12 bg-white border-b border-gray-100">
+      <section className="py-12 bg-black border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-primary-500 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-primary-100 hover:text-primary-700'
+                    ? 'bg-white text-black'
+                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white border border-gray-700'
                 }`}
               >
                 {category}
@@ -110,33 +118,32 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-20">
+      <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post, index) => (
               <article 
                 key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group animate-slide-up"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-800 hover:border-gray-600"
               >
                 <div className="relative overflow-hidden">
                   <img 
                     src={post.image} 
                     alt={post.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-primary-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-white text-black px-3 py-1 rounded-full text-sm font-medium">
                       {post.category}
                     </span>
                   </div>
                 </div>
                 
                 <div className="p-6">
-                  <h2 className="text-xl font-bold text-dark-800 mb-3 group-hover:text-primary-600 transition-colors">
+                  <h2 className="text-xl font-bold text-white mb-3 hover:text-gray-300 transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-gray-400 mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
                   
@@ -159,7 +166,7 @@ const Blog = () => {
                   
                   <Link 
                     to={`/blog/${post.slug}`}
-                    className="text-primary-500 font-medium hover:text-primary-600 transition-colors flex items-center group"
+                    className="text-white font-medium hover:text-gray-300 transition-colors flex items-center group"
                   >
                     Read More
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -172,12 +179,12 @@ const Blog = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-500 to-secondary-500">
+      <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
             Stay Updated
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 mb-12 max-w-4xl mx-auto">
             Subscribe to our newsletter to receive the latest insights on clean energy, 
             sustainability trends, and industry developments.
           </p>
@@ -185,9 +192,9 @@ const Blog = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+              className="flex-1 px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
             />
-            <button className="bg-white text-primary-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+            <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all duration-300">
               Subscribe
             </button>
           </div>

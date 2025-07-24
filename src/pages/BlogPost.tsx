@@ -1,6 +1,5 @@
-import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Calendar, User, Clock, ArrowLeft, Share2, BookOpen, Tag } from 'lucide-react';
+import { Calendar, User, Clock, ArrowLeft, Share2, BookOpen, Tag, ArrowRight } from 'lucide-react';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -780,33 +779,33 @@ const BlogPost = () => {
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary-50 to-secondary-50 overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={post.image} 
+          <img
+            src={post.image}
             alt={post.title}
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 to-secondary-900/80"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link 
-            to="/blog" 
+          <Link
+            to="/blog"
             className="inline-flex items-center text-white/80 hover:text-white transition-colors mb-8 group"
           >
             <ArrowLeft className="mr-2 h-5 w-5 group-hover:-translate-x-1 transition-transform" />
             Back to Blog
           </Link>
-          
+
           <div className="mb-6">
             <span className="bg-primary-500 text-white px-4 py-2 rounded-full text-sm font-medium">
               {post.category}
             </span>
           </div>
-          
+
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             {post.title}
           </h1>
-          
+
           <div className="flex items-center space-x-6 text-white/90">
             <div className="flex items-center space-x-2">
               <User className="h-5 w-5" />
@@ -814,10 +813,10 @@ const BlogPost = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Calendar className="h-5 w-5" />
-              <span>{new Date(post.date).toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
+              <span>{new Date(post.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
               })}</span>
             </div>
             <div className="flex items-center space-x-2">
@@ -851,7 +850,7 @@ const BlogPost = () => {
             </div>
 
             {/* Article Body */}
-            <div 
+            <div
               className="prose prose-lg max-w-none prose-headings:text-primary-900 prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-primary-600 prose-a:no-underline hover:prose-a:text-primary-700 prose-strong:text-primary-800 prose-ul:text-gray-700 prose-li:text-gray-700"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
@@ -866,7 +865,7 @@ const BlogPost = () => {
             Related Articles
           </h2>
           <div className="text-center">
-            <Link 
+            <Link
               to="/blog"
               className="inline-flex items-center bg-primary-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-primary-600 transition-all duration-300 group"
             >

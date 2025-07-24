@@ -1,5 +1,4 @@
-import React from 'react';
-import { Target, Eye, Heart, Users, Globe, Award, TrendingUp, Calendar } from 'lucide-react';
+import { Target, Eye, Heart, Users, Globe, Award, Calendar } from 'lucide-react';
 
 const About = () => {
   const values = [
@@ -64,28 +63,36 @@ const About = () => {
   ];
 
   return (
-    <div className="animate-fade-in">
+    <div className="bg-black text-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-50 to-secondary-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-dark-800 mb-6">
-            About Thaara Energy
+    
+      <section
+        className="relative min-h-[60vh] flex items-center justify-center text-center bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('/thaaraLogo.png')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
+        <div className="relative z-10 max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+          About Thaara Energy
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A forward-looking clean energy company committed to accelerating the global transition to sustainable power.
+          <p className="text-white/80 text-lg">
+          A forward-looking clean energy company committed to accelerating the global transition to sustainable power.
           </p>
         </div>
       </section>
 
       {/* Company Overview */}
-      <section className="py-20">
+      <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-dark-800 mb-6">
+              <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
                 Who We Are
               </h2>
-              <div className="prose prose-lg text-gray-600 space-y-4">
+              <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
                 <p>
                   Thaara Energy is a forward-looking clean energy company committed to accelerating the global 
                   transition to sustainable power. We specialize in the development and delivery of innovative, 
@@ -103,11 +110,11 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-8">
+            <div className="bg-gray-900 rounded-lg p-8 border border-gray-800">
               <img 
                 src="/Thaara energy background.webp" 
                 alt="Solar Park with Green Landscape" 
-                className="w-full h-64 object-cover rounded-lg"
+                className="w-full h-80 object-cover rounded-lg"
               />
             </div>
           </div>
@@ -115,35 +122,50 @@ const About = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="flex items-center mb-6">
-                <Eye className="h-8 w-8 text-primary-500 mr-3" />
-                <h2 className="text-2xl font-bold text-dark-800">Our Vision</h2>
+            <div className="bg-black rounded-lg p-10 shadow-lg border border-gray-800">
+              <div className="flex items-center mb-8">
+                <Eye className="h-10 w-10 text-white mr-4" />
+                <h2 className="text-3xl font-bold text-white">Our Vision</h2>
               </div>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-400 text-lg leading-relaxed">
                 To be a leading renewable energy player in India, creating resilient ecosystems that empower 
                 communities, future-proof industries, and drive inclusive economic growth across emerging markets.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="flex items-center mb-6">
-                <Target className="h-8 w-8 text-secondary-500 mr-3" />
-                <h2 className="text-2xl font-bold text-dark-800">Our Mission</h2>
+            <div className="bg-black rounded-lg p-10 shadow-lg border border-gray-800">
+              <div className="flex items-center mb-8">
+                <Target className="h-10 w-10 text-white mr-4" />
+                <h2 className="text-3xl font-bold text-white">Our Mission</h2>
               </div>
-              <p className="text-gray-600 text-lg leading-relaxed mb-4">
+              <p className="text-gray-400 text-lg leading-relaxed mb-6">
                 Drive clean energy adoption through innovative and efficient solar solutions. At Thaara Energy, 
                 our mission is to accelerate the transition to clean, efficient, and scalable energy solutions by:
               </p>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Developing innovative renewable energy projects that reduce carbon footprints</li>
-                <li>• Building robust electric mobility infrastructure</li>
-                <li>• Delivering sustainable industrial solutions</li>
-                <li>• Collaborating with strategic partners for impactful clean-tech initiatives</li>
-                <li>• Championing responsible entrepreneurship where profitability and sustainability co-exist</li>
+              <ul className="text-gray-400 space-y-3">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Developing innovative renewable energy projects that reduce carbon footprints
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Building robust electric mobility infrastructure
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Delivering sustainable industrial solutions
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Collaborating with strategic partners for impactful clean-tech initiatives
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  Championing responsible entrepreneurship where profitability and sustainability co-exist
+                </li>
               </ul>
             </div>
           </div>
@@ -151,13 +173,13 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20">
+      <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-dark-800 mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
               Our Core Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto">
               The principles that guide our decision-making and drive our commitment to sustainable progress.
             </p>
           </div>
@@ -166,14 +188,13 @@ const About = () => {
             {values.map((value, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group animate-slide-up"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="bg-gray-900 rounded-lg p-8 hover:bg-gray-800 transition-all duration-300 border border-gray-800 hover:border-gray-600"
               >
-                <div className="bg-gradient-to-r from-primary-500 to-secondary-500 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                  <value.icon className="h-8 w-8 text-white" />
+                <div className="bg-white w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                  <value.icon className="h-8 w-8 text-black" />
                 </div>
-                <h3 className="text-xl font-bold text-dark-800 mb-4">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -181,20 +202,20 @@ const About = () => {
       </section>
 
       {/* Founder Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <h2 className="text-3xl lg:text-4xl font-bold text-dark-800 mb-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
                 About the Founder
               </h2>
-              <h3 className="text-2xl font-semibold text-primary-600 mb-4">
+              <h3 className="text-2xl font-semibold text-white mb-4">
                 Ponnam Rajeev Chandra
               </h3>
-              <p className="text-lg text-gray-700 mb-4 font-medium">
+              <p className="text-lg text-gray-300 mb-6 font-medium">
                 Founder & Managing Director, Thaara Energy
               </p>
-              <div className="prose prose-lg text-gray-600 space-y-4">
+              <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
                 <p>
                   A lawyer by profession and a sustainability enthusiast by conviction, Ponnam Rajeev Chandra 
                   has always believed that progressive businesses must lead the way toward a cleaner, more resilient future.
@@ -213,27 +234,25 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="order-1 lg:order-2">
-              <div className="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-8">
-                <img 
-                  src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                  alt="Ponnam Rajeev Chandra - Founder" 
-                  className="w-full h-80 object-cover rounded-lg"
-                />
-              </div>
+            <div className="bg-black rounded-lg p-8 border border-gray-800">
+              <img 
+                src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Ponnam Rajeev Chandra - Founder" 
+                className="w-full h-96 object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* 5-Year Strategic Plan */}
-      <section className="py-20">
+      <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-dark-800 mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
               5-Year Strategic Plan
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-400">
               Our roadmap for growth and expansion in the renewable energy sector
             </p>
           </div>
@@ -242,28 +261,27 @@ const About = () => {
             {strategicPlan.map((plan, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate-slide-up"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="bg-gray-900 rounded-lg shadow-lg p-8 hover:bg-gray-800 transition-all duration-300 border border-gray-800 hover:border-gray-600"
               >
                 <div className="grid md:grid-cols-4 gap-6 items-center">
                   <div className="text-center">
-                    <div className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-2">
+                    <div className="bg-white text-black w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                       {plan.year}
                     </div>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       plan.status === 'In Progress' 
-                        ? 'bg-green-100 text-green-700' 
-                        : 'bg-blue-100 text-blue-700'
+                        ? 'bg-green-900 text-green-300 border border-green-700' 
+                        : 'bg-blue-900 text-blue-300 border border-blue-700'
                     }`}>
                       {plan.status}
                     </span>
                   </div>
                   <div className="md:col-span-2">
-                    <h3 className="text-xl font-bold text-dark-800 mb-2">{plan.focus}</h3>
-                    <p className="text-gray-600">{plan.milestone}</p>
+                    <h3 className="text-xl font-bold text-white mb-2">{plan.focus}</h3>
+                    <p className="text-gray-400">{plan.milestone}</p>
                   </div>
                   <div className="text-center">
-                    <Calendar className="h-8 w-8 text-primary-500 mx-auto" />
+                    <Calendar className="h-8 w-8 text-white mx-auto" />
                   </div>
                 </div>
               </div>
@@ -273,13 +291,13 @@ const About = () => {
       </section>
 
       {/* Company Stats */}
-      <section className="py-20 bg-gradient-to-r from-primary-500 to-secondary-500">
+      <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
               Our Impact & Growth
             </h2>
-            <p className="text-xl text-white/90">
+            <p className="text-xl text-gray-400">
               Building India's renewable energy future with proven results
             </p>
           </div>
@@ -291,9 +309,9 @@ const About = () => {
               { value: '50+', label: 'Projects Completed' },
               { value: '100+', label: 'Satisfied Clients' }
             ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-white/90">{stat.label}</div>
+              <div key={index} className="text-center bg-black rounded-lg p-8 border border-gray-800">
+                <div className="text-4xl lg:text-5xl font-bold text-white mb-4">{stat.value}</div>
+                <div className="text-gray-400">{stat.label}</div>
               </div>
             ))}
           </div>

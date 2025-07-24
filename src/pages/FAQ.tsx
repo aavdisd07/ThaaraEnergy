@@ -37,40 +37,59 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-white text-black">
+    <div className="bg-black text-white">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center text-center bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/574092/pexels-photo-574092.jpeg?auto=compress&cs=tinysrgb&w=1600')" }}>
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-secondary-800/80 to-primary-900/90"></div>
-        <div className="z-10 max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold text-white mb-4">Frequently Asked Questions</h1>
-          <p className="text-white/90 text-lg">Answers to the most common queries about our services and solutions.</p>
+      <section
+        className="relative min-h-[60vh] flex items-center justify-center text-center bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://ae-solar.com/_next/image?url=%2Fimages%2FheroSectionBackground.jpeg&w=3840&q=75')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/8" />
+        <div className="relative z-10 max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-white/80 text-lg">
+            Answers to the most common queries about our services and solutions.
+          </p>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-gradient-to-b from-primary-50 to-white">
+      <section className="py-20 sm:py-24 bg-black">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary-900 text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-white text-center mb-12">
             Your Questions, Answered
           </h2>
+
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border border-primary-200 rounded-2xl shadow-sm bg-white overflow-hidden transition-all duration-300"
+                className={`border rounded-xl transition-all duration-300 overflow-hidden ${
+                  activeIndex === index
+                    ? 'bg-white/10 border-white'
+                    : 'border-white/20 bg-white/5 hover:bg-white/10'
+                }`}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
                 >
-                  <span className="text-lg font-medium text-primary-900">{faq.question}</span>
+                  <span className="text-lg sm:text-xl font-medium text-white">
+                    {faq.question}
+                  </span>
                   <ChevronDown
-                    className={`w-6 h-6 text-primary-700 transition-transform duration-300 ${activeIndex === index ? 'rotate-180' : ''
-                      }`}
+                    className={`w-6 h-6 text-white transition-transform duration-300 ${
+                      activeIndex === index ? 'rotate-180' : ''
+                    }`}
                   />
                 </button>
+
                 {activeIndex === index && (
-                  <div className="px-6 pb-6 text-primary-700 text-sm leading-relaxed">
+                  <div className="px-6 pb-6 text-white/80 text-sm sm:text-base leading-relaxed">
                     {faq.answer}
                   </div>
                 )}
