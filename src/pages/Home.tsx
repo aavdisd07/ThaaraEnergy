@@ -116,9 +116,9 @@ const Home = () => {
             <main className="pt-16">
                 <div className="overflow-hidden">
                     {/* Hero Section */}
-                    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+                    <section className=" min-h-screen flex items-center justify-center overflow-hidden">
                         {/* Background Video */}
-                        <div className="absolute inset-0 w-full h-full overflow-hidden">
+                        {/* <div className="absolute inset-0 w-[100%] h-full overflow-hidden">
                             <video
                                 className="fixed inset-0 w-full h-full object-cover"
                                 src="https://res.cloudinary.com/dnywncw8q/video/upload/q_auto,f_auto/13492018_1920_1080_60fps_5_yufubi.mp4"
@@ -127,8 +127,37 @@ const Home = () => {
                                 muted
                                 playsInline
                                 style={{ pointerEvents: 'none' }}
+                                
+                            />
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/NqICKmuOAVw?autoplay=1&mute=1&loop=1&playlist=NqICKmuOAVw&controls=0&showinfo=0&modestbranding=1&rel=0"
+                                title="YouTube video background"
+                                frameBorder="0"
+                                allow="autoplay; fullscreen"
+                                allowFullScreen
+                                style={{
+                                    position: 'fixed',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    pointerEvents: 'none',
+                                    objectFit: 'cover',
+                                    zIndex: 0,
+                                }}
+                            />
+                        </div> */}
+                        <div className="fixed top-0 left-0 w-screen h-screen overflow-hidden z-0">
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/NqICKmuOAVw?autoplay=1&mute=1&loop=1&playlist=NqICKmuOAVw&controls=0&modestbranding=1&rel=0"
+                                title="Background Video"
+                                frameBorder="0"
+                                allow="autoplay; fullscreen"
+                                allowFullScreen
+                                className="w-full h-full pointer-events-none"
                             />
                         </div>
+
 
                         {/* Content */}
                         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
