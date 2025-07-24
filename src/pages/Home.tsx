@@ -515,6 +515,18 @@ const Home = () => {
                             {/* Full-Width Section with Text Left and Image Right */}
                             <div className="bg-black text-white w-full py-16 sm:py-20 md:py-24 lg:py-28 px-4 lg:px-0">
                                 <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 sm:gap-10 md:gap-12 xl:gap-16">
+                                    
+                                     {/* Right Image Section */}
+                                     <div className="w-full lg:w-1/2 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-none">
+                                        <div className="overflow-hidden shadow-2xl border border-white/10 rounded-lg md:rounded-xl">
+                                            <img
+                                                src="https://media.istockphoto.com/id/525206743/photo/solar-panel-on-a-red-roof.jpg?s=612x612&w=0&k=20&c=xcAkdNj8dFDhu8734FpRDAZDtN2bjr48RKEd9j2FL0U="
+                                                alt="Solar Installation on red roof"
+                                                className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </div>
                                     {/* Left Text Section */}
                                     <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 md:space-y-10 px-0 sm:px-2 lg:px-0 text-center lg:text-left">
                                         <h4 className="text-white text-lg sm:text-xl font-medium">From Vision to Viability</h4>
@@ -535,17 +547,7 @@ const Home = () => {
                                         <h4 className="text-white text-lg sm:text-xl font-medium">From Local Sites to National Scale</h4>
                                     </div>
 
-                                    {/* Right Image Section */}
-                                    <div className="w-full lg:w-1/2 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-none">
-                                        <div className="overflow-hidden shadow-2xl border border-white/10 rounded-lg md:rounded-xl">
-                                            <img
-                                                src="https://media.istockphoto.com/id/525206743/photo/solar-panel-on-a-red-roof.jpg?s=612x612&w=0&k=20&c=xcAkdNj8dFDhu8734FpRDAZDtN2bjr48RKEd9j2FL0U="
-                                                alt="Solar Installation on red roof"
-                                                className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover hover:scale-105 transition-transform duration-700"
-                                                loading="lazy"
-                                            />
-                                        </div>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>
