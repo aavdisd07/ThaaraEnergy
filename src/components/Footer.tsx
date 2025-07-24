@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#222222_0.5px,transparent_0.5px)] [background-size:20px_20px] opacity-20" />
 
       {/* Solar Glow Effects */}
-      <div className="absolute -bottom-12 -right-8 w-72 h-72 bg-gradient-to-br from-white/60 to-transparent rounded-full blur-2xl animate-float" />
+      {/* <div className="absolute -bottom-12 -right-8 w-72 h-72 bg-gradient-to-br from-white/60 to-transparent rounded-full blur-2xl animate-float" /> */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -17,7 +17,7 @@ const Footer = () => {
               <div>
                 <h4 className="text-xl font-bold">Thaara Energy</h4>
                 <p className="text-gray-400 text-sm flex items-center mt-1">
-                  <Leaf className="h-4 w-4 mr-1" />
+                  <Leaf className="h-4 w-4 mr-1 text-green-500" />
                   Powering Progress with Sustainability
                 </p>
               </div>

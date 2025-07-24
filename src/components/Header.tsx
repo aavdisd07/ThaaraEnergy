@@ -155,7 +155,6 @@ const Header = () => {
                       ? 'text-black'
                       : 'text-black hover:text-black hover:backdrop-blur-2xl hover:bg-black/40'
                       }`}
-                    style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                   >
                     {item.name}
                     {item.dropdown && (
