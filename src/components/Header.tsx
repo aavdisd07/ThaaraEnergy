@@ -144,7 +144,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-4 pt-4 pb-6 space-y-3 bg-white/10 backdrop-blur-3xl border-t border-gray-700 rounded-b-2xl">
+            <div className="px-4 pt-4 pb-6 space-y-3 bg-white backdrop-blur-6xl border-t border-black rounded-b-2xl">
               {navigation.map((item) => (
                 <div key={item.name} className="relative">
                   <button
@@ -153,8 +153,8 @@ const Header = () => {
                       setDropdownOpen(dropdownOpen === item.name ? null : item.name)
                     }
                     className={`w-full text-left px-4 py-2 text-base font-semibold uppercase tracking-wide rounded-lg transition-all duration-300 flex items-center justify-between gap-1 ${isActive(item.href)
-                      ? 'text-white'
-                      : 'text-white hover:text-black'
+                      ? 'text-black'
+                      : 'text-black hover:text-black hover:backdrop-blur-2xl hover:bg-black/40'
                       }`}
                     style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                   >
