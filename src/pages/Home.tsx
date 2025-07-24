@@ -154,8 +154,8 @@ const Home = () => {
                                     </a>
 
                                     <a href="/contact.html"
-                                        className="group relative bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base shadow-xl border border-white/20 hover:bg-gray-900 transition-all duration-300"
-                                    >
+                                            className="group relative border border-white/70 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg md:rounded-xl font-semibold text-sm sm:text-base hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105"
+                                            >
                                         <span className="relative z-10 group-hover:text-white">
                                             Start Your Project
                                         </span>
