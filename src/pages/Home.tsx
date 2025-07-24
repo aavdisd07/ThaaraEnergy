@@ -147,7 +147,26 @@ const Home = () => {
                                 }}
                             />
                         </div> */}
-                        <div className="fixed top-0 left-0 w-screen h-screen overflow-hidden z-0">
+
+
+                        <div className="absolute inset-0 w-[100%] h-full overflow-hidden">
+                            <video
+                                className="fixed inset-0 w-full h-full object-cover"
+                                src="mp4.mp4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                style={{ pointerEvents: 'none' }}
+
+                            />
+                        </div>
+
+
+
+
+
+                        {/* <div className="fixed top-0 left-0 w-screen h-screen overflow-hidden z-0">
                             <iframe
                                 src="https://www.youtube-nocookie.com/embed/NqICKmuOAVw?autoplay=1&mute=1&loop=1&playlist=NqICKmuOAVw&controls=0&modestbranding=1&rel=0"
                                 title="Background Video"
@@ -156,7 +175,7 @@ const Home = () => {
                                 allowFullScreen
                                 className="w-full h-full pointer-events-none"
                             />
-                        </div>
+                        </div> */}
 
 
                         {/* Content */}
