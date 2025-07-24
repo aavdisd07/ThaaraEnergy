@@ -266,7 +266,7 @@ const Home = () => {
                                             style={{ filter: 'brightness(0) invert(1)' }}
                                         />
                                         <p className="text-lg sm:text-xl lg:text-2xl font-medium text-white">Unmatched Experience</p>
-                                        <p className="text-sm sm:text-base text-white leading-relaxed">The SunPower name represents decades of solar innovation.</p>
+                                        <p className="text-sm sm:text-base text-white leading-relaxed">The Thaara Energy name represents decades of solar innovation.</p>
                                     </div>
 
                                     {/* Feature 2 */}
