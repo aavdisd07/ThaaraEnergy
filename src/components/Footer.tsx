@@ -18,7 +18,7 @@ const Footer = () => {
                 <h4 className="text-xl font-bold">Thaara Energy</h4>
                 <p className="text-gray-400 text-sm flex items-center mt-1">
                   <Leaf className="h-4 w-4 mr-1 text-green-500" />
-                  Powering Progress with Sustainability
+                  Empowering Progress, Sustainably
                 </p>
               </div>
             </div>
