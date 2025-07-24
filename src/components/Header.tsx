@@ -118,8 +118,7 @@ const Header = () => {
                       <a
                         key={sub.name}
                         href={sub.href}
-                        className="block px-4 py-2 text-sm text-black hover:text-white hover:bg-black/80  transition-colors duration-200"
-                        style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
+                        className="block px-4 py-2 text-2sm text-black hover:text-white hover:bg-black/80  transition-colors duration-200"
                       >
                         {sub.name}
                       </a>
@@ -171,8 +170,8 @@ const Header = () => {
                         <a
                           key={sub.name}
                           href={sub.href}
-                          className="block px-4 py-2 text-sm text-black hover:text-white hover:bg-black/60 rounded-lg transition-colors duration-200"
-                          style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
+                          className="block px-4 py-2 text-2sm text-black hover:text-white hover:bg-black/60 rounded-lg transition-colors duration-200"
+                          
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {sub.name}
