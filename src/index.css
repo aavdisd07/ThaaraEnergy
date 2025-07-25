@@ -68,3 +68,14 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  iframe {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+  }
+  

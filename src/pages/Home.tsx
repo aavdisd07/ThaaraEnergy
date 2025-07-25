@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { useRef } from 'react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 import 'swiper/css/navigation';
@@ -13,6 +12,32 @@ import 'swiper/css/pagination';
 const Home = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
+    const [showIframe, setShowIframe] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    // Timeout fallback if video doesn't load within 3 seconds
+    const fallbackTimer = setTimeout(() => {
+      setShowIframe(true);
+    }, 3000);
+
+    // Clear timeout if video starts playing
+    const handleCanPlay = () => {
+      clearTimeout(fallbackTimer);
+    };
+
+    const videoElement = videoRef.current as HTMLVideoElement | null;
+    if (videoElement) {
+      videoElement.addEventListener('canplaythrough', handleCanPlay);
+    }
+
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('canplaythrough', handleCanPlay);
+      }
+      clearTimeout(fallbackTimer);
+    };
+  }, []);
 
     const [] = useState(0);
 
@@ -108,7 +133,7 @@ const Home = () => {
         },
     ];
 
-
+ 
 
     return (
         <div className="min-h-screen bg-black">
@@ -148,34 +173,30 @@ const Home = () => {
                             />
                         </div> */}
 
-
-                        <div className="absolute inset-0 w-[100%] h-full overflow-hidden">
-                            <video
-                                className="fixed inset-0 w-full h-full object-cover"
-                                src="mp4.mp4"
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                style={{ pointerEvents: 'none' }}
-
-                            />
+                        <div className="absolute inset-0 w-full h-full overflow-hidden">
+                            {!showIframe ? (
+                                <video
+                                    ref={videoRef}
+                                    className="fixed inset-0 w-full h-full object-cover"
+                                    src="mp41.mp4"
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    style={{ pointerEvents: 'none' }}
+                                />
+                            ) : (
+                                <iframe
+                                    src="https://www.youtube-nocookie.com/embed/NqICKmuOAVw?autoplay=1&mute=1&loop=1&playlist=NqICKmuOAVw&controls=0&modestbranding=1&rel=0"
+                                    title="Background Video"
+                                    frameBorder="0"
+                                    allow="autoplay; fullscreen"
+                                    allowFullScreen
+                                    className="fixed inset-0 w-full h-full pointer-events-none"
+                                />
+                            )}
                         </div>
 
-
-
-
-
-                        {/* <div className="fixed top-0 left-0 w-screen h-screen overflow-hidden z-0">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/NqICKmuOAVw?autoplay=1&mute=1&loop=1&playlist=NqICKmuOAVw&controls=0&modestbranding=1&rel=0"
-                                title="Background Video"
-                                frameBorder="0"
-                                allow="autoplay; fullscreen"
-                                allowFullScreen
-                                className="w-full h-full pointer-events-none"
-                            />
-                        </div> */}
 
 
                         {/* Content */}
