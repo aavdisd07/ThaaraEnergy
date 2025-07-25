@@ -186,14 +186,27 @@ const Home = () => {
                                     style={{ pointerEvents: 'none' }}
                                 />
                             ) : (
-                                <iframe
-                                    src="https://www.youtube-nocookie.com/embed/NqICKmuOAVw?autoplay=1&mute=1&loop=1&playlist=NqICKmuOAVw&controls=0&modestbranding=1&rel=0"
-                                    title="Background Video"
-                                    frameBorder="0"
-                                    allow="autoplay; fullscreen"
-                                    allowFullScreen
-                                    className="fixed inset-0 w-full h-full pointer-events-none"
-                                />
+                               <iframe
+    src="https://www.youtube-nocookie.com/embed/NqICKmuOAVw?autoplay=1&mute=1&loop=1&playlist=NqICKmuOAVw&controls=0&modestbranding=1&rel=0"
+    title="Background Video"
+    frameBorder="0"
+    allow="autoplay; fullscreen"
+    allowFullScreen
+    style={{
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100vw',
+        height: '100vh',
+        minWidth: '100%',
+        minHeight: '100%',
+        objectFit: 'cover',
+        pointerEvents: 'none',
+        zIndex: 0,
+        border: 'none',
+        outline: 'none'
+    }}
+/>
                             )}
                         </div>
 
