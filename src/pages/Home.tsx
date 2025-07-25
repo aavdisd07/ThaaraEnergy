@@ -19,7 +19,7 @@ const Home = () => {
     // Timeout fallback if video doesn't load within 3 seconds
     const fallbackTimer = setTimeout(() => {
       setShowIframe(true);
-    }, 3000);
+    }, 500);
 
     // Clear timeout if video starts playing
     const handleCanPlay = () => {
