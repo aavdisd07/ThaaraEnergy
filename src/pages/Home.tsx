@@ -146,7 +146,7 @@ const Home = () => {
                          <div className="absolute inset-0 w-[100%] h-full overflow-hidden">
                             <video
                                 className="fixed inset-0 w-full h-full object-cover"
-                                src="https://res.cloudinary.com/dnywncw8q/video/upload/q_auto,f_auto/13492018_1920_1080_60fps_5_yufubi.mp4"
+                                src="mp43.mp4"
                                 autoPlay
                                 loop
                                 muted
