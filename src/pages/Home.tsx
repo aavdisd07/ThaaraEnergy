@@ -13,31 +13,31 @@ const Home = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
     const [showIframe, setShowIframe] = useState(false);
-  const videoRef = useRef(null);
+    const videoRef = useRef(null);
 
-  useEffect(() => {
-    // Timeout fallback if video doesn't load within 3 seconds
-    const fallbackTimer = setTimeout(() => {
-      setShowIframe(true);
-    }, 500);
+    useEffect(() => {
+        // Timeout fallback if video doesn't load within 3 seconds
+        const fallbackTimer = setTimeout(() => {
+            setShowIframe(true);
+        }, 500);
 
-    // Clear timeout if video starts playing
-    const handleCanPlay = () => {
-      clearTimeout(fallbackTimer);
-    };
+        // Clear timeout if video starts playing
+        const handleCanPlay = () => {
+            clearTimeout(fallbackTimer);
+        };
 
-    const videoElement = videoRef.current as HTMLVideoElement | null;
-    if (videoElement) {
-      videoElement.addEventListener('canplaythrough', handleCanPlay);
-    }
+        const videoElement = videoRef.current as HTMLVideoElement | null;
+        if (videoElement) {
+            videoElement.addEventListener('canplaythrough', handleCanPlay);
+        }
 
-    return () => {
-      if (videoElement) {
-        videoElement.removeEventListener('canplaythrough', handleCanPlay);
-      }
-      clearTimeout(fallbackTimer);
-    };
-  }, []);
+        return () => {
+            if (videoElement) {
+                videoElement.removeEventListener('canplaythrough', handleCanPlay);
+            }
+            clearTimeout(fallbackTimer);
+        };
+    }, []);
 
     const [] = useState(0);
 
@@ -133,7 +133,7 @@ const Home = () => {
         },
     ];
 
- 
+
 
     return (
         <div className="min-h-screen bg-black">
@@ -143,7 +143,7 @@ const Home = () => {
                     {/* Hero Section */}
                     <section className=" min-h-screen flex items-center justify-center overflow-hidden">
                         {/* Background Video */}
-                        {/* <div className="absolute inset-0 w-[100%] h-full overflow-hidden">
+                         <div className="absolute inset-0 w-[100%] h-full overflow-hidden">
                             <video
                                 className="fixed inset-0 w-full h-full object-cover"
                                 src="https://res.cloudinary.com/dnywncw8q/video/upload/q_auto,f_auto/13492018_1920_1080_60fps_5_yufubi.mp4"
@@ -154,7 +154,7 @@ const Home = () => {
                                 style={{ pointerEvents: 'none' }}
                                 
                             />
-                            <iframe
+                            {/* <iframe
                                 src="https://www.youtube-nocookie.com/embed/NqICKmuOAVw?autoplay=1&mute=1&loop=1&playlist=NqICKmuOAVw&controls=0&showinfo=0&modestbranding=1&rel=0"
                                 title="YouTube video background"
                                 frameBorder="0"
@@ -170,10 +170,10 @@ const Home = () => {
                                     objectFit: 'cover',
                                     zIndex: 0,
                                 }}
-                            />
-                        </div> */}
+                            /> */}
+                        </div> 
 
-                        <div className="absolute inset-0 w-full h-full overflow-hidden">
+                        {/* <div className="absolute inset-0 w-full h-full overflow-hidden">
                             {!showIframe ? (
                                 <video
                                     ref={videoRef}
@@ -186,31 +186,17 @@ const Home = () => {
                                     style={{ pointerEvents: 'none' }}
                                 />
                             ) : (
-                               <iframe
-    src="https://www.youtube-nocookie.com/embed/NqICKmuOAVw?autoplay=1&mute=1&loop=1&playlist=NqICKmuOAVw&controls=0&modestbranding=1&rel=0"
-    title="Background Video"
-    frameBorder="0"
-    allow="autoplay; fullscreen"
-    allowFullScreen
-    style={{
-        position: 'fixed',
-        top: '0',
-        left: '0',
-        width: '100vw',
-        height: '100vh',
-        minWidth: '100%',
-        minHeight: '100%',
-        objectFit: 'cover',
-        pointerEvents: 'none',
-        zIndex: 0,
-        border: 'none',
-        outline: 'none'
-    }}
-/>
+                                <iframe
+                                    src="https://player.cloudinary.com/embed/?cloud_name=dnywncw8q&public_id=13492018_1920_1080_60fps_5_yufubi&profile=third"
+                                    // width={300}
+                                    // height={300}
+                                    style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+                                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                                    allowFullScreen
+                                    frameBorder="0"
+                                />
                             )}
-                        </div>
-
-
+                        </div> */}
 
                         {/* Content */}
                         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
