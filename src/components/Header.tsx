@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -74,7 +75,7 @@ const Header = () => {
   };
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-30 bg-black/30 backdrop-blur-6xl ">
+    <header className="absolute top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-6xl w-screen">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24 w-full">
 
