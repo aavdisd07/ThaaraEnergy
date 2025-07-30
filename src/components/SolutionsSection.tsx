@@ -47,7 +47,7 @@ const SolutionsSection = () => {
             <div className="w-full px-4 sm:px-6 lg:px-8">
                 {/* Title and Description */}
                 <div className="mb-8 sm:mb-10 md:mb-12 text-left mt-2 sm:mt-4">
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-3 sm:mb-4 leading-tight">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-black mb-3 sm:mb-4 leading-tight">
                         Solutions
                     </h2>
                     <p className="text-base sm:text-lg md:text-xl text-black max-w-5xl leading-relaxed">
@@ -82,12 +82,12 @@ const SolutionsSection = () => {
                                     <div className="absolute top-0 left-0 right-0 z-10">
                                         <div className="absolute top-0 left-0 right-0 h-24 sm:h-32 lg:h-36 bg-gradient-to-b from-black via-black/60 to-transparent transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"></div>
                                         <div className="relative px-4 sm:px-6 pt-4 sm:pt-6 pb-3 sm:pb-4">
-                                            <h3
-                                                className="text-white text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold leading-tight"
-                                                style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}
-                                            >
-                                                {image.title}
-                                            </h3>
+                                                                                         <h3
+                                                 className="text-white text-base sm:text-lg lg:text-xl xl:text-2xl font-semibold leading-tight"
+                                                 style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}
+                                             >
+                                                 {image.title}
+                                             </h3>
                                         </div>
                                     </div>
 

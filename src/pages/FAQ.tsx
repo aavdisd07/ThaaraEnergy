@@ -60,7 +60,7 @@ const FAQ = () => {
       {/* FAQ Section */}
       <section className="py-20 sm:py-24 bg-black">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-white text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white text-center mb-12">
             Your Questions, Answered
           </h2>
 

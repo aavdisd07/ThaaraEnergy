@@ -178,7 +178,7 @@ const Industries = () => {
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
               Market Opportunities
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto">
@@ -219,7 +219,7 @@ const Industries = () => {
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
               Success Stories
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto">
@@ -280,7 +280,7 @@ const Industries = () => {
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
               Why Choose Thaara Energy?
             </h2>
             <p className="text-xl text-gray-400">
@@ -326,7 +326,7 @@ const Industries = () => {
       {/* CTA Section */}
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
             Ready to Transform Your Industry with Clean Energy?
           </h2>
           <p className="text-xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">

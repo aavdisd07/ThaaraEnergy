@@ -89,7 +89,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
                 Who We Are
               </h2>
               <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
@@ -176,7 +176,7 @@ const About = () => {
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
               Our Core Values
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto">
@@ -206,7 +206,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
                 About the Founder
               </h2>
               <h3 className="text-2xl font-semibold text-white mb-4">
@@ -246,7 +246,7 @@ const About = () => {
       </section>
 
       {/* 5-Year Strategic Plan */}
-      <section className="py-24 bg-black">
+      {/* <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
@@ -288,13 +288,13 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Company Stats */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
               Our Impact & Growth
             </h2>
             <p className="text-xl text-gray-400">

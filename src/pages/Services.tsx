@@ -5,7 +5,7 @@ const Services = () => {
     {
       title: 'Utility-Scale Solar Parks',
       description: 'We identify, develop, and deliver bankable solar projects with strong returns and long-term viability.',
-      icon: Sun,
+      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80',
       features: [
         'Land acquisition and development',
         'Turnkey park infrastructure',
@@ -18,7 +18,7 @@ const Services = () => {
     {
       title: 'EPCM for Renewable Infrastructure',
       description: 'From engineering to procurement and construction management, we offer turnkey solutions optimized for efficiency, quality, and ROI.',
-      icon: Zap,
+      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80',
       features: [
         'End-to-end execution',
         'Design optimization',
@@ -30,7 +30,7 @@ const Services = () => {
     {
       title: 'Strategic Advisory in Renewables',
       description: 'Our expertise supports governments, corporations, and investors in navigating the energy transition.',
-      icon: Users,
+      image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80',
       features: [
         'Policy and subsidy navigation',
         'Technical guidance',
@@ -42,7 +42,7 @@ const Services = () => {
     {
       title: 'EV Charging Infrastructure',
       description: 'We enable the shift to electric mobility by deploying reliable, smart charging networks.',
-      icon: Battery,
+      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80',
       features: [
         'Urban charging hubs',
         'Commercial charging solutions',
@@ -54,7 +54,7 @@ const Services = () => {
     {
       title: 'Green Hydrogen Initiatives',
       description: 'We are advancing early-stage development of green hydrogen as a key pillar of deep decarbonization.',
-      icon: Wind,
+      image: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80',
       features: [
         'Industrial hydrogen solutions',
         'Energy sector applications',
@@ -165,7 +165,7 @@ const Services = () => {
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
               Portfolio of Services
             </h2>
             <p className="text-xl text-gray-400">
@@ -173,32 +173,46 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="space-y-8">
             {mainServices.map((service, index) => (
               <div 
                 key={index}
-                className="bg-gray-900 rounded-lg p-10 hover:bg-gray-800 transition-all duration-300 border border-gray-800 hover:border-gray-600"
+                className="bg-gray-900 rounded-lg p-8 hover:bg-gray-800 transition-all duration-300 border border-gray-800 hover:border-gray-600"
               >
-                <div className="bg-white w-20 h-20 rounded-lg flex items-center justify-center mb-8">
-                  <service.icon className="h-10 w-10 text-black" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                {service.highlight && (
-                  <div className="bg-white text-black px-4 py-2 rounded-full text-sm font-medium inline-block mb-6">
-                    {service.highlight}
-                  </div>
-                )}
-                <p className="text-gray-400 mb-8 leading-relaxed">{service.description}</p>
-                
-                <div className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
-                      <div className="bg-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0">
-                        <CheckCircle className="h-4 w-4 text-black" />
-                      </div>
-                      <span className="text-gray-300">{feature}</span>
+                <div className={`flex flex-col lg:flex-row items-center lg:items-start gap-12 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                  {/* Image Section */}
+                  <div className="flex-shrink-0">
+                    <div className="w-72 h-52 rounded-xl overflow-hidden shadow-2xl border border-gray-700">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
                     </div>
-                  ))}
+                  </div>
+                  
+                  {/* Content Section */}
+                  <div className={`flex-1 text-center lg:text-left lg:px-8`}>
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-4 leading-tight">{service.title}</h3>
+                    {service.highlight && (
+                      <div className="bg-gradient-to-r from-white to-gray-100 text-black px-6 py-3 rounded-full text-sm font-semibold inline-block mb-6 shadow-lg">
+                        {service.highlight}
+                      </div>
+                    )}
+                    <p className="text-gray-300 mb-6 leading-relaxed text-base">{service.description}</p>
+                    
+                    <div className="space-y-3">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-4 justify-center lg:justify-start">
+                          <div className="bg-gradient-to-r from-white to-gray-100 w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                            <CheckCircle className="h-3 w-3 text-black" />
+                          </div>
+                          <span className="text-gray-200 text-sm font-medium">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -210,7 +224,7 @@ const Services = () => {
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
               Our Offerings
             </h2>
             <p className="text-xl text-gray-400">
@@ -258,7 +272,7 @@ const Services = () => {
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
               Subsidy Strategy
             </h2>
             <p className="text-xl text-gray-400">
@@ -314,7 +328,7 @@ const Services = () => {
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
               Why Choose Thaara Energy?
             </h2>
           </div>
@@ -376,7 +390,7 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">
             Ready to Transform Your Energy Future?
           </h2>
           <p className="text-xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">

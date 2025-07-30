@@ -14,7 +14,7 @@ const MissionSection = () => {
             <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 flex flex-col gap-6 justify-center min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]">
                 {/* Heading */}
                 <div className="text-center">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold drop-shadow-lg" style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}>Our Mission</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold drop-shadow-lg" style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}>Our Mission</h2>
                 </div>
 
                 {/* Paragraph */}

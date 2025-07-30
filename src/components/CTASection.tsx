@@ -20,7 +20,7 @@ const CTASection = () => {
 
                     {/* Text Section */}
                     <div className="order-2 md:order-1 text-center md:text-left w-full">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                             Ready to Power Your Future with Clean Energy?
                         </h2>
                         <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto md:mx-0">

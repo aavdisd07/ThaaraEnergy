@@ -37,7 +37,7 @@ const IndustrySection = () => {
             <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
                 {/* Heading */}
                 <div className="mb-8 sm:mb-10 md:mb-12 text-left mt-2 sm:mt-4">
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-3 sm:mb-4 leading-tight">
                         Industry Opportunity
                     </h2>
                     <p className="text-base sm:text-lg md:text-xl text-white max-w-5xl leading-relaxed">
