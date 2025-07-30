@@ -53,6 +53,13 @@ const Home = () => {
             description: 'Commercial and residential installations'
         },
         {
+            src: 'https://media.istockphoto.com/id/1339079398/photo/agrivoltaic.jpg?s=612x612&w=0&k=20&c=TNMuoNoANhWmkIhr5FMxvw0Vb0Aq2Ufsem4Esra8S2A=',
+            title: 'Agrivoltaics',
+            description: 'We integrate agriculture with solar power systems to maximize land productivity, ensuring renewable energy generation and food cultivation coexist efficiently.',
+
+
+        },
+        {
             src: 'https://media.wired.com/photos/63bc816a995aa119ba7ba802/3:2/w_2560%2Cc_limit/Biz-ev-charger-1242853588.jpg',
             title: 'EV Charging Infrastructure',
             description: 'Electric mobility solutions'
@@ -63,50 +70,47 @@ const Home = () => {
             description: 'We are advancing early-stage development of green hydrogen as a key pillar of deep decarbonization for industrial and energy applications.',
         },
         {
-            src: '/industrialSolar.jpg',
-            title: 'Industrial Solar',
-            description: 'Manufacturing and industrial applications'
-        },
-        {
-            src: 'https://media.wired.com/photos/65eb756aeff26b3b538512d3/4:3/w_2132,h_1599,c_limit/Solar-Revolution-Groundwater-Climate-Desk-Science-1476252781.jpg',
-            title: 'Agricultural Solar',
-            description: 'Solar pumps and agri-feeders'
-        },
-        {
-            src: 'https://media.istockphoto.com/id/2208060389/photo/energy-saving-homes-energy-efficiency-concepts-eco-friendly-home-improvements-cost-savings.jpg?s=2048x2048&w=is&k=20&c=bf-LumLn4ra5V23KEs9hwEVC6opCqihQaqDWF-J3q00=',
-            title: 'EPCM for Renewable Infrastructure',
-            description: 'From engineering to procurement and construction management, we offer turnkey solutions optimized for efficiency, quality, and ROI.',
-        },
-        {
-            src: 'https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=800',
-            title: 'Strategic Advisory in Renewables',
-            description: 'Our expertise supports governments, corporations, and investors in navigating the energy transition with policy guidance and technical advisory.',
-        },
-
-        {
-            src: "https://media.istockphoto.com/id/1035403678/photo/solar-photovoltaic-panels-and-substations-in-the-evening.jpg?s=612x612&w=0&k=20&c=d03DYzZqCdr39sgyrYMRxj7NE4Aq26EyrXdilNw98Qk=",
+            src: "./portable.jpg",
             title: "Portable Substation",
             description: "A solar portable substation is a self-contained, transportable unit that integrates solar power generation with electrical distribution equipment, often housed within a container or trailer for easy relocation."
 
         },
         {
-            src: 'https://media.istockphoto.com/id/1339079398/photo/agrivoltaic.jpg?s=612x612&w=0&k=20&c=TNMuoNoANhWmkIhr5FMxvw0Vb0Aq2Ufsem4Esra8S2A=',
-            title: 'Agrivoltaics',
-            description: 'We integrate agriculture with solar power systems to maximize land productivity, ensuring renewable energy generation and food cultivation coexist efficiently.',
-
-
+            src: 'https://shiva-engineering.com/wp-content/uploads/2024/09/solar-eps-scaled.jpg',
+            title: 'EPCM for Renewable Infrastructure',
+            description: 'From engineering to procurement and construction management, we offer turnkey solutions optimized for efficiency, quality, and ROI.',
         },
         {
-            src: 'https://c1.wallpaperflare.com/preview/941/871/807/solar-system-renewable-energy-pv-power-generation-eco-energy.jpg',
-            title: "Photovoltaic (PV) System",
-            description: 'Our PV systems harness solar energy through advanced photovoltaic modules, enabling reliable, clean electricity for homes, businesses, and industries.',
+            src: 'https://rural.us/wp-content/uploads/2022/08/rsw_1280-1.webp',
+            title: "Aquavoltaics",
+            description: 'Helping people build resilient communities through local and sustainable solutions that reduce poverty, strengthen self-reliance, and protect natural resources.',
 
         },
-        {
-            src: 'https://img.microgridknowledge.com/files/base/ebm/microgridknowledge/image/2022/09/1663688582199-lamontana.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630',
-            title: 'Solar Microgrids',
-            description: 'Decentralized solar microgrids delivering energy access to remote and underserved regions with resilience and reliability.'
-        }
+        // {
+        //     src: '/industrialSolar.jpg',
+        //     title: 'Industrial Solar',
+        //     description: 'Manufacturing and industrial applications'
+        // },
+        // {
+        //     src: 'https://media.wired.com/photos/65eb756aeff26b3b538512d3/4:3/w_2132,h_1599,c_limit/Solar-Revolution-Groundwater-Climate-Desk-Science-1476252781.jpg',
+        //     title: 'Agricultural Solar',
+        //     description: 'Solar pumps and agri-feeders'
+        // },
+
+        // {
+        //     src: 'https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=800',
+        //     title: 'Strategic Advisory in Renewables',
+        //     description: 'Our expertise supports governments, corporations, and investors in navigating the energy transition with policy guidance and technical advisory.',
+        // },
+
+
+
+
+        // {
+        //     src: 'https://img.microgridknowledge.com/files/base/ebm/microgridknowledge/image/2022/09/1663688582199-lamontana.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630',
+        //     title: 'Solar Microgrids',
+        //     description: 'Decentralized solar microgrids delivering energy access to remote and underserved regions with resilience and reliability.'
+        // }
 
 
     ];
@@ -143,16 +147,16 @@ const Home = () => {
                     {/* Hero Section */}
                     <section className=" min-h-screen flex items-center justify-center overflow-hidden">
                         {/* Background Video */}
-                         <div className="absolute inset-0 w-[100%] h-full overflow-hidden">
+                        <div className="absolute inset-0 w-[100%] h-full overflow-hidden">
                             <video
                                 className="fixed inset-0 w-full h-full object-cover"
-                                src="mp43.mp4"
+                                src="mp123.mp4"
                                 autoPlay
                                 loop
                                 muted
                                 playsInline
                                 style={{ pointerEvents: 'none' }}
-                                
+
                             />
                             {/* <iframe
                                 src="https://www.youtube-nocookie.com/embed/NqICKmuOAVw?autoplay=1&mute=1&loop=1&playlist=NqICKmuOAVw&controls=0&showinfo=0&modestbranding=1&rel=0"
@@ -171,7 +175,7 @@ const Home = () => {
                                     zIndex: 0,
                                 }}
                             /> */}
-                        </div> 
+                        </div>
 
                         {/* <div className="absolute inset-0 w-full h-full overflow-hidden">
                             {!showIframe ? (
@@ -206,7 +210,7 @@ const Home = () => {
                                         Empowering Progress, Sustainably
                                     </h2>
                                 </div>
-                                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-4" style={{ textShadow: '5px 5px 5px rgba(11, 9, 9, 0.98)' }}>
+                                <p className="text-base sm:text-lg md:text-xl lg:text-xl text-white/90 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-4" style={{ textShadow: '5px 5px 5px rgba(11, 9, 9, 0.98)' }}>
                                     Thaara Energy stands at the intersection of innovation, sustainability, and investment opportunity.
                                     We specialize in the development and delivery of innovative, high-impact solutions across the renewable energy value chain.
                                 </p>
@@ -235,10 +239,9 @@ const Home = () => {
                     </section>
 
                     {/* Solutions Section */}
-                    <section className="py-12 sm:py-16 lg:py-20 bg-white relative">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <section className="py-12 sm:py-16 lg:py-20 bg-white relative w-full">
+                        <div className="w-full px-4 sm:px-6 lg:px-8 mx-auto">
                             {/* Title and Description */}
-
                             <div className="mb-8 sm:mb-10 md:mb-12 text-left mt-2 sm:mt-4">
                                 <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-3 sm:mb-4 leading-tight">
                                     Solutions
@@ -249,67 +252,67 @@ const Home = () => {
                             </div>
 
                             {/* Cards Grid */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
-                                {galleryImages.map((image, index) => (
-                                    <div
-                                        key={index}
-                                        className="group relative bg-gray-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-sm mx-auto lg:max-w-none"
-                                        style={{ animationDelay: `${index * 100}ms` }}
-                                    >
-                                        {/* Image Container */}
-                                        <div className="relative h-64 sm:h-80 lg:h-96 xl:h-[520px] overflow-hidden">
-                                            <img
-                                                src={image.src}
-                                                alt={image.title}
-                                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                            />
+                            <div className="w-full">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
+                                    {galleryImages.map((image, index) => (
+                                        <div
+                                            key={index}
+                                            className="group relative bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 w-full"
+                                            style={{ animationDelay: `${index * 100}ms` }}
+                                        >
+                                            {/* Image Container */}
+                                            <div className="relative h-64 sm:h-80 lg:h-96 xl:h-[520px] overflow-hidden">
+                                                <img
+                                                    src={image.src}
+                                                    alt={image.title}
+                                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                                />
 
-                                            {/* Overlay gradient */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
+                                                {/* Overlay gradient */}
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
 
-                                            {/* Hover tint */}
-                                            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-90 transition-opacity duration-300"></div>
+                                                {/* Hover tint */}
+                                                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-90 transition-opacity duration-300"></div>
 
-                                            {/* Top Gradient with Title */}
-                                            <div className="absolute top-0 left-0 right-0 z-10">
-                                                <div className="absolute top-0 left-0 right-0 h-24 sm:h-32 lg:h-36 bg-gradient-to-b from-black via-black/60 to-transparent transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"></div>
-                                                <div className="relative px-4 sm:px-6 pt-4 sm:pt-6 pb-3 sm:pb-4">
-                                                    <h3
-                                                        className="text-white text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold leading-tight"
+                                                {/* Top Gradient with Title */}
+                                                <div className="absolute top-0 left-0 right-0 z-10">
+                                                    <div className="absolute top-0 left-0 right-0 h-24 sm:h-32 lg:h-36 bg-gradient-to-b from-black via-black/60 to-transparent transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0"></div>
+                                                    <div className="relative px-4 sm:px-6 pt-4 sm:pt-6 pb-3 sm:pb-4">
+                                                        <h3
+                                                            className="text-white text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold leading-tight"
+                                                            style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}
+                                                        >
+                                                            {image.title}
+                                                        </h3>
+                                                    </div>
+                                                </div>
+
+                                                {/* Bottom Description and Button */}
+                                                <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6 transition-all duration-300">
+                                                    <p
+                                                        className="text-sm sm:text-base lg:text-lg opacity-0 group-hover:opacity-100 leading-relaxed text-white mb-3 sm:mb-4"
                                                         style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}
                                                     >
-                                                        {image.title}
-                                                    </h3>
+                                                        {image.description}
+                                                    </p>
+                                                    <button
+                                                        className="inline-block px-3 sm:px-4 py-2 bg-white text-black text-xs sm:text-sm font-semibold rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                                    >
+                                                        Explore More
+                                                    </button>
                                                 </div>
                                             </div>
-
-                                            {/* Bottom Description and Button */}
-                                            <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6 transition-all duration-300">
-                                                <p
-                                                    className="text-sm sm:text-base lg:text-lg opacity-0 group-hover:opacity-100 leading-relaxed text-white mb-3 sm:mb-4"
-                                                    style={{ textShadow: '1px 1px 2px rgb(0, 0, 0)' }}
-                                                >
-                                                    {image.description}
-                                                </p>
-                                                <button
-                                                    className="inline-block px-3 sm:px-4 py-2 bg-white text-black text-xs sm:text-sm font-semibold rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                                                >
-                                                    Explore More
-                                                </button>
-                                            </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </section>
 
-                    {/* Our Vision Section */}
-                    {/* <section className="w-full bg-black pt-8 sm:pt-12 pb-8 sm:pb-16 px-4 sm:px-8 lg:px-12 xl:px-24 relative">
-                        <div className="max-w-7xl mx-auto"> */}
 
                     <section className="py-12 sm:py-16 lg:py-20 bg-black relative">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="w-full px-4 sm:px-6 lg:px-8">
+
                             {/* Title and Description */}
                             <div className="mb-8 sm:mb-10 md:mb-12 text-left mt-2 sm:mt-4">
                                 <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
@@ -443,7 +446,7 @@ const Home = () => {
                     </section>
                     {/* industry sectionu */}
                     <section className="pt-8 sm:pt-20 md:pt-24 lg:pt-28 sm:pb-10 md:pb-12 lg:pb-12 bg-black text-white relative overflow-hidden">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
                             {/* Heading */}
                             <div className="mb-8 sm:mb-10 md:mb-12 text-left mt-2 sm:mt-4">
                                 <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
@@ -573,11 +576,10 @@ const Home = () => {
                             </div>
 
                             {/* Full-Width Section with Text Left and Image Right */}
-                            <div className="bg-black text-white w-full py-16 sm:py-20 md:py-24 lg:py-28 px-4 lg:px-0">
-                                <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 sm:gap-10 md:gap-12 xl:gap-16">
-
+                            <div className="w-screen bg-black text-white py-16 sm:py-20 md:py-24 lg:py-28">
+                                <div className="max-w-none w-full flex flex-col lg:flex-row items-center gap-6 sm:gap-10 md:gap-12 xl:gap-12 px-4 lg:px-4">
                                     {/* Right Image Section */}
-                                    <div className="w-full lg:w-1/2 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-none">
+                                    <div className="w-full lg:w-1/2">
                                         <div className="overflow-hidden shadow-2xl border border-white/10 rounded-lg md:rounded-xl">
                                             <img
                                                 src="https://media.istockphoto.com/id/525206743/photo/solar-panel-on-a-red-roof.jpg?s=612x612&w=0&k=20&c=xcAkdNj8dFDhu8734FpRDAZDtN2bjr48RKEd9j2FL0U="
@@ -587,8 +589,9 @@ const Home = () => {
                                             />
                                         </div>
                                     </div>
+
                                     {/* Left Text Section */}
-                                    <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 md:space-y-10 px-0 sm:px-2 lg:px-0 text-center lg:text-left">
+                                    <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 md:space-y-10 text-center lg:text-left">
                                         <h4 className="text-white text-lg sm:text-xl font-medium">From Vision to Viability</h4>
 
                                         <div className="space-y-4 sm:space-y-6">
@@ -608,15 +611,17 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </section>
 
                     {/* CTA Section */}
-                    <section className="pt-2 sm:pt-10 md:pt-12 lg:pt-8 pb-8 sm:pb-20 md:pb-24 lg:pb-28 bg-black text-white relative overflow-hidden">
-                        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
-                                {/* Image Section - Shows first on mobile, second on desktop */}
-                                <div className="flex justify-center order-1 md:order-2">
+                    <section className="pt-2 sm:pt-10 md:pt-12 lg:pt-8 pb-8 sm:pb-20 md:pb-24 lg:pb-28 bg-black text-white relative overflow-hidden w-full">
+                        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 md:gap-12 lg:gap-12 items-center w-full">
+
+                                {/* Image Section */}
+                                <div className="flex justify-center order-1 md:order-2 w-full">
                                     <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl">
                                         <img
                                             src="https://www.shutterstock.com/image-photo/modern-house-black-solar-panels-600nw-2188743139.jpg"
@@ -627,8 +632,8 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                {/* Text Section - Shows second on mobile, first on desktop */}
-                                <div className="order-2 md:order-1 text-center md:text-left">
+                                {/* Text Section */}
+                                <div className="order-2 md:order-1 text-center md:text-left w-full">
                                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                                         Ready to Power Your Future with Clean Energy?
                                     </h2>
@@ -660,6 +665,7 @@ const Home = () => {
                             </div>
                         </div>
                     </section>
+
 
                 </div >
             </main >

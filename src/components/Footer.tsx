@@ -2,14 +2,11 @@ import { Mail, MapPin, Leaf, Sparkles } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden text-white bg-black">
+    <footer className="relative overflow-hidden text-white bg-black w-screen">
       {/* Subtle Solar Grid Pattern */}
       <div className="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#222222_0.5px,transparent_0.5px)] [background-size:20px_20px] opacity-20" />
 
-      {/* Solar Glow Effects */}
-      {/* <div className="absolute -bottom-12 -right-8 w-72 h-72 bg-gradient-to-br from-white/60 to-transparent rounded-full blur-2xl animate-float" /> */}
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand & Mission */}
           <div className="lg:col-span-2">
@@ -70,7 +67,7 @@ const Footer = () => {
                 <Mail className="text-white w-5 h-5" />
                 <div className="text-gray-300">
                   <div>rajeev@thaaraenergy.com</div>
-                  <div className="mt-1">amrithaa@thaararajeev.com</div>
+                  <div className="mt-1">amrithaa@thaaraenergy.com</div>
                 </div>
               </div>
             </div>

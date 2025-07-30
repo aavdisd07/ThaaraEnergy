@@ -75,22 +75,22 @@ const Header = () => {
 
   return (
     <header className="absolute top-0 left-0 right-0 z-30 bg-black/30 backdrop-blur-6xl ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-24 w-full">
+
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center gap-2">
+            <a href="/" className="flex items-start gap-2">
               <img
                 src="/thaaraLogo.png"
                 alt="Thaara Energy Logo"
                 className="h-16 w-auto object-contain"
-
               />
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-end space-x-2">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <a
@@ -170,7 +170,7 @@ const Header = () => {
                           key={sub.name}
                           href={sub.href}
                           className="block px-4 py-2 text-2sm text-black hover:text-white hover:bg-black/60 rounded-lg transition-colors duration-200"
-                          
+
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {sub.name}

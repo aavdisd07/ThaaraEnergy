@@ -1,4 +1,4 @@
-import { Building2, Factory, Home, Zap, Truck, Sun, Battery, Leaf, Wind, Sparkles, Globe, TrendingUp } from 'lucide-react';
+import { Building2, Factory, Home, Zap, Truck, Sun, Battery, Leaf } from 'lucide-react';
 
 const Industries = () => {
   const industries = [
