@@ -8,7 +8,7 @@ const SolutionsSection = () => {
         {
             src: '/WhatsApp Image 2025-07-01 at 1.01.35 PM.webp',
             title: 'Rooftop Solar Systems',
-            description: 'Commercial and residential installations'
+            description: 'Complete rooftop solar solutions for commercial and residential properties, including design, installation, and maintenance. Reduce electricity bills by up to 90% with grid-tied and off-grid systems.'
         },
         {
             src: 'https://media.istockphoto.com/id/1339079398/photo/agrivoltaic.jpg?s=612x612&w=0&k=20&c=TNMuoNoANhWmkIhr5FMxvw0Vb0Aq2Ufsem4Esra8S2A=',
@@ -18,12 +18,12 @@ const SolutionsSection = () => {
         {
             src: 'https://media.wired.com/photos/63bc816a995aa119ba7ba802/3:2/w_2560%2Cc_limit/Biz-ev-charger-1242853588.jpg',
             title: 'EV Charging Infrastructure',
-            description: 'Electric mobility solutions'
+            description: 'Comprehensive electric vehicle charging solutions including fast chargers, smart charging stations, and grid integration. Support the transition to sustainable transportation with reliable charging infrastructure.'
         },
         {
             src: '/storage.jpg',
             title: 'Energy Storage Solutions',
-            description: 'We are advancing early-stage development of green hydrogen as a key pillar of deep decarbonization for industrial and energy applications.',
+            description: 'Advanced energy storage systems including lithium-ion batteries, flow batteries, and green hydrogen solutions. Enable grid stability, peak shaving, and renewable energy integration for industrial and commercial applications.',
         },
         {
             src: "./portable.jpg",
@@ -33,7 +33,7 @@ const SolutionsSection = () => {
         {
             src: 'https://shiva-engineering.com/wp-content/uploads/2024/09/solar-eps-scaled.jpg',
             title: 'EPCM for Renewable Infrastructure',
-            description: 'From engineering to procurement and construction management, we offer turnkey solutions optimized for efficiency, quality, and ROI.',
+            description: 'End-to-end Engineering, Procurement, Construction, and Management services for renewable energy projects. We handle project planning, equipment sourcing, construction oversight, and commissioning to ensure optimal performance and returns.',
         },
         {
             src: 'https://rural.us/wp-content/uploads/2022/08/rsw_1280-1.webp',
@@ -99,12 +99,15 @@ const SolutionsSection = () => {
                                         >
                                             {image.description}
                                         </p>
-                                        <button
-                                            className="inline-block px-3 sm:px-4 py-2 bg-white text-black text-xs sm:text-sm font-semibold rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                                        >
+                                            <a
+                                             href="/services.html#subsidy"
+                                             className="inline-block px-3 text-center sm:px-4 py-2 bg-white text-black text-xs sm:text-sm font-semibold rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                         >
                                             Explore More
-                                        </button>
+                                        </a>
                                     </div>
+
+                                    {/* End of image card */}
                                 </div>
                             </div>
                         ))}

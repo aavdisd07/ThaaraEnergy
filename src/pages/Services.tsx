@@ -269,7 +269,7 @@ const Services = () => {
       </section>
 
       {/* Subsidy Strategy */}
-      <section className="py-24 bg-black">
+      <section id="subsidy" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-8">

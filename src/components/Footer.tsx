@@ -66,8 +66,18 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Mail className="text-white w-5 h-5" />
                 <div className="text-gray-300">
-                  <div>rajeev@thaaraenergy.com</div>
-                  <div className="mt-1">amrithaa@thaaraenergy.com</div>
+                  <a 
+                    href="mailto:rajeev@thaaraenergy.com" 
+                    className="hover:text-white transition-colors duration-200"
+                  >
+                    rajeev@thaaraenergy.com
+                  </a>
+                  <a 
+                    href="mailto:amrithaa@thaaraenergy.com" 
+                    className="block mt-1 hover:text-white transition-colors duration-200"
+                  >
+                    amrithaa@thaaraenergy.com
+                  </a>
                 </div>
               </div>
             </div>

@@ -69,7 +69,7 @@ const Contact = () => {
   return (
     <div className="bg-black text-white">
       {/* Hero Section */}
-      <section 
+      <section
         className="relative py-32 bg-gray-900"
         style={{
           backgroundImage: "url('https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=1600')",
@@ -78,13 +78,13 @@ const Contact = () => {
         }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-8">
             Get In Touch
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Ready to transform your energy future? Contact us to discuss your clean energy 
+            Ready to transform your energy future? Contact us to discuss your clean energy
             and sustainability requirements. We're here to help you achieve your goals.
           </p>
         </div>
@@ -97,25 +97,22 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="bg-gray-900 rounded-lg shadow-xl border border-gray-800">
               {/* Form Header */}
-              <div className="relative h-32 bg-gray-800 rounded-t-lg">
-                <img 
-                  src="https://images.pexels.com/photos/9800029/pexels-photo-9800029.jpeg?auto=compress&cs=tinysrgb&w=800" 
+              <div className="relative h-86 bg-gray-800 rounded-t-lg">
+                <img
+                  src="https://media.istockphoto.com/id/1401461127/photo/hand-of-businessman-using-smartphone-for-email-with-notification-alert.jpg?s=612x612&w=0&k=20&c=s9nSBMOSkKKaKkUlRfpmfVGKYTfYMixbYPDQsdfk4NQ="
                   alt="Contact Us"
-                  className="w-full h-full object-cover rounded-t-lg opacity-60"
+                  className="w-full h-full object-cover rounded-t-lg opacity-4"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-t-lg"></div>
-                <div className="absolute bottom-4 left-6">
-                  <h2 className="text-2xl font-bold text-white">Send Us a Message</h2>
+                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center">
+                  <h2 className="text-2xl font-bold text-white ">Send Us a Message</h2>
                 </div>
               </div>
-              
-              <div className="p-10">
-                <form onSubmit={handleSubmit} className="space-y-6">
+
+               <div className="px-6 pt-6 pb-2 ">
+                 <form onSubmit={handleSubmit} className="space-y-4 text-white">
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
-                        Full Name *
-                      </label>
+                    <div className="relative">
                       <input
                         type="text"
                         id="name"
@@ -123,14 +120,18 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-300 bg-gray-800 text-white"
-                        placeholder="Your full name"
+                        className="peer w-full bg-black border border-gray-700 rounded-md px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-white transition-all"
+                        placeholder="Full Name"
                       />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                        Email Address *
+                      <label
+                        htmlFor="name"
+                        className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-white"
+                      >
+                        Full Name *
                       </label>
+                    </div>
+
+                    <div className="relative">
                       <input
                         type="email"
                         id="email"
@@ -138,86 +139,101 @@ const Contact = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-300 bg-gray-800 text-white"
-                        placeholder="your@email.com"
+                        className="peer w-full bg-black border border-gray-700 rounded-md px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-white transition-all"
+                        placeholder="Email Address"
                       />
+                      <label
+                        htmlFor="email"
+                        className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-white"
+                      >
+                        Email Address *
+                      </label>
                     </div>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
-                        Company/Organization
-                      </label>
+                    <div className="relative">
                       <input
                         type="text"
                         id="company"
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-300 bg-gray-800 text-white"
-                        placeholder="Your company name"
+                        className="peer w-full bg-black border border-gray-700 rounded-md px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-white transition-all"
+                        placeholder="Company"
                       />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
-                        Phone Number
+                      <label
+                        htmlFor="company"
+                        className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-white"
+                      >
+                        Company/Organization
                       </label>
+                    </div>
+
+                    <div className="relative">
                       <input
                         type="tel"
                         id="phone"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-300 bg-gray-800 text-white"
-                        placeholder="Your phone number"
+                        className="peer w-full bg-black border border-gray-700 rounded-md px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-white transition-all"
+                        placeholder="Phone Number"
                       />
+                      <label
+                        htmlFor="phone"
+                        className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-white"
+                      >
+                        Phone Number
+                      </label>
                     </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-white mb-2">
-                      Service Interest
-                    </label>
+                  <div className="relative">
                     <select
                       id="service"
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-300 bg-gray-800 text-white"
+                      className="w-full bg-black border border-gray-700 rounded-md px-4 py-4 text-white focus:outline-none focus:ring-2 focus:ring-white transition-all appearance-none"
                     >
                       <option value="">Select a service</option>
-                      {services.map((service, index) => (
-                        <option key={index} value={service}>{service}</option>
+                      {services.map((service, idx) => (
+                        <option key={idx} value={service}>{service}</option>
                       ))}
                     </select>
+                    <label htmlFor="service" className="block mt-2 text-sm text-gray-400">Service Interest</label>
                   </div>
 
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                      Message *
-                    </label>
+                  <div className="relative">
                     <textarea
                       id="message"
                       name="message"
-                      required
                       rows={6}
+                      required
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition-all duration-300 resize-none bg-gray-800 text-white"
-                      placeholder="Tell us about your project requirements..."
+                      className="peer w-full bg-black border border-gray-700 rounded-md px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-white transition-all resize-none"
+                      placeholder="Message"
                     />
+                    <label
+                      htmlFor="message"
+                      className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-white"
+                    >
+                      Message *
+                    </label>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-white text-black py-4 rounded-lg font-semibold hover:bg-gray-200 transition-all duration-300 flex items-center justify-center shadow-lg"
+                    className="w-full bg-gradient-to-r from-white to-gray-300 text-black py-4 rounded-lg font-semibold hover:from-gray-200 hover:to-white transition-all duration-300 flex items-center justify-center shadow-lg"
                   >
-                    Send Message
+                    Get Quotation
                     <Send className="ml-3 h-5 w-5" />
                   </button>
                 </form>
               </div>
+
             </div>
 
             {/* Contact Information */}
@@ -227,14 +243,14 @@ const Contact = () => {
                   Contact Information
                 </h2>
                 <p className="text-gray-400 mb-8 text-lg leading-relaxed">
-                  We're here to help you with your clean energy and sustainability needs. 
+                  We're here to help you with your clean energy and sustainability needs.
                   Reach out to us through any of the following channels.
                 </p>
               </div>
 
               <div className="grid gap-6">
                 {contactInfo.map((info, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="bg-gray-900 rounded-lg border border-gray-800 hover:border-gray-600 transition-colors duration-300"
                   >
@@ -262,7 +278,7 @@ const Contact = () => {
                   <h3 className="text-xl font-semibold text-white">Quick Response</h3>
                 </div>
                 <p className="text-gray-400 leading-relaxed">
-                  We typically respond to all inquiries within 24 hours during business days. 
+                  We typically respond to all inquiries within 24 hours during business days.
                   For urgent matters, please call us directly.
                 </p>
               </div>
@@ -282,12 +298,12 @@ const Contact = () => {
               Headquartered in Hyderabad, India, serving emerging markets across India and Europe.
             </p>
           </div>
-          
+
           <div className="bg-black rounded-lg shadow-xl border border-gray-800">
             {/* Map Header */}
             <div className="relative h-64">
-              <img 
-                src="https://images.pexels.com/photos/9800029/pexels-photo-9800029.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+              <img
+                src="https://images.pexels.com/photos/9800029/pexels-photo-9800029.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Hyderabad Solar Infrastructure"
                 className="w-full h-full object-cover rounded-t-lg"
               />
@@ -304,7 +320,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="p-12 text-center">
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="group">
