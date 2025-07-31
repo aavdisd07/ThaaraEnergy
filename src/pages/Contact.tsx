@@ -47,7 +47,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['rajeev@thaaraenergy.com', 'amrithaa@thaararajeev.com']
+      details: ['rajeev@thaaraenergy.com', 'amrithaa@thaaraenergy.com']
     },
     {
       icon: Clock,
@@ -93,151 +93,9 @@ const Contact = () => {
       {/* Contact Section */}
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            <div className="bg-gray-900 rounded-lg shadow-xl border border-gray-800">
-              {/* Form Header */}
-              <div className="relative h-86 bg-gray-800 rounded-t-lg">
-                <img
-                  src="https://media.istockphoto.com/id/1401461127/photo/hand-of-businessman-using-smartphone-for-email-with-notification-alert.jpg?s=612x612&w=0&k=20&c=s9nSBMOSkKKaKkUlRfpmfVGKYTfYMixbYPDQsdfk4NQ="
-                  alt="Contact Us"
-                  className="w-full h-full object-cover rounded-t-lg opacity-4"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-t-lg"></div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center">
-                  <h2 className="text-2xl font-bold text-white ">Send Us a Message</h2>
-                </div>
-              </div>
-
-               <div className="px-6 pt-6 pb-2 ">
-                 <form onSubmit={handleSubmit} className="space-y-4 text-white">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="relative">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="peer w-full bg-black border border-gray-700 rounded-md px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-white transition-all"
-                        placeholder="Full Name"
-                      />
-                      <label
-                        htmlFor="name"
-                        className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-white"
-                      >
-                        Full Name *
-                      </label>
-                    </div>
-
-                    <div className="relative">
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="peer w-full bg-black border border-gray-700 rounded-md px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-white transition-all"
-                        placeholder="Email Address"
-                      />
-                      <label
-                        htmlFor="email"
-                        className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-white"
-                      >
-                        Email Address *
-                      </label>
-                    </div>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="relative">
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        className="peer w-full bg-black border border-gray-700 rounded-md px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-white transition-all"
-                        placeholder="Company"
-                      />
-                      <label
-                        htmlFor="company"
-                        className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-white"
-                      >
-                        Company/Organization
-                      </label>
-                    </div>
-
-                    <div className="relative">
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="peer w-full bg-black border border-gray-700 rounded-md px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-white transition-all"
-                        placeholder="Phone Number"
-                      />
-                      <label
-                        htmlFor="phone"
-                        className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-white"
-                      >
-                        Phone Number
-                      </label>
-                    </div>
-                  </div>
-
-                  <div className="relative">
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      className="w-full bg-black border border-gray-700 rounded-md px-4 py-4 text-white focus:outline-none focus:ring-2 focus:ring-white transition-all appearance-none"
-                    >
-                      <option value="">Select a service</option>
-                      {services.map((service, idx) => (
-                        <option key={idx} value={service}>{service}</option>
-                      ))}
-                    </select>
-                    <label htmlFor="service" className="block mt-2 text-sm text-gray-400">Service Interest</label>
-                  </div>
-
-                  <div className="relative">
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={6}
-                      required
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="peer w-full bg-black border border-gray-700 rounded-md px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-white transition-all resize-none"
-                      placeholder="Message"
-                    />
-                    <label
-                      htmlFor="message"
-                      className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-white"
-                    >
-                      Message *
-                    </label>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-white to-gray-300 text-black py-4 rounded-lg font-semibold hover:from-gray-200 hover:to-white transition-all duration-300 flex items-center justify-center shadow-lg"
-                  >
-                    Get Quotation
-                    <Send className="ml-3 h-5 w-5" />
-                  </button>
-                </form>
-              </div>
-
-            </div>
-
+                    <div className="flex justify-center">
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-8 max-w-2xl">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Contact Information
@@ -261,7 +119,25 @@ const Contact = () => {
                       <div>
                         <h3 className="text-xl font-semibold text-white mb-3">{info.title}</h3>
                         {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} className="text-gray-400 font-medium">{detail}</p>
+                          <p key={detailIndex} className="text-gray-400 font-medium">
+                            {info.title === 'Email' ? (
+                              <a 
+                                href={`mailto:${detail}`}
+                                className="hover:text-white transition-colors duration-200"
+                              >
+                                {detail}
+                              </a>
+                            ) : info.title === 'Phone' ? (
+                              <a 
+                                href={`tel:${detail}`}
+                                className="hover:text-white transition-colors duration-200"
+                              >
+                                {detail}
+                              </a>
+                            ) : (
+                              detail
+                            )}
+                          </p>
                         ))}
                       </div>
                     </div>
