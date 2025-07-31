@@ -42,7 +42,7 @@ const Services = () => {
     {
       title: 'EV Charging Infrastructure',
       description: 'We enable the shift to electric mobility by deploying reliable, smart charging networks.',
-      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80',
+      image: 'https://www.aant.com.au/sites/default/files/styles/frontpage_liftup_link_images/public/2024-01/Picture1.jpg?h=1e3205a3&itok=Sjt3xUNg',
       features: [
         'Urban charging hubs',
         'Commercial charging solutions',
